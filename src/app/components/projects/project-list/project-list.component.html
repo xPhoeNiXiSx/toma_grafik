@@ -1,9 +1,26 @@
-<h2>Liste des projets</h2>
-<ul>
-  <li *ngFor="let project of projects">
-    <h3>{{ project.title }}</h3>
-    <p>{{ project.collection.title }}</p>
-    <p>{{ project.date | date }}</p>
-    <img *ngIf="project.thumbnail.url !== ''" [src]="project.thumbnail.url" alt="{{ project.thumbnail.title }}">
-  </li>
-</ul>
+<div class="project-container">
+  <div class="project-list">
+    <div *ngFor="let project of projects" class="project-item">
+      <div class="project__thumbnail">
+        <img height="600" *ngIf="project.thumbnail.url !== ''" [src]="project.thumbnail.url" alt="{{ project.thumbnail.title }}">
+      </div>
+      <div class="project__content">
+        <div class="project__description">
+          <h1>{{ project.title }}</h1>
+          <p>{{ project.sizeWidth }}</p>
+          <p>{{ project.sizeHeight }}</p>
+          <p>{{ project.collection.title }}</p>
+          <p>{{ project.date | date }}</p>
+        </div>
+        <div *ngFor="let photo of project.photos" class="project__photos">
+          <img height="100" *ngIf="photo.url !== ''" [src]="photo.url" alt="{{ photo.title }} - {{ photo.description }}">
+        </div>
+      </div>
+    </div>
+  </div>
+  <ul>
+    <li *ngFor="let project of projects">
+      
+    </li>
+  </ul>
+</div>

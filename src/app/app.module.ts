@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ProjectService } from './services/project.service';
+import { ProjectService } from './services/project/project.service';
 import { ProjectListComponent } from './components/projects/project-list/project-list.component';
 import { HeaderComponent } from './components/header/header.component';
 

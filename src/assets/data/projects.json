@@ -1,34 +1,47 @@
 [
   {
     "id": 1,
-    "thumbnail": {
-      "id": 1,
-      "url": "assets/img/projects/project1.jpg",
-      "title": "Projet 1",
-      "description": "Miniature du projet 1"
-    },
-    "photos": [
-      {
-        "id": 2,
-        "url": "assets/img/projects/project1.jpg",
-        "title": "Projet 1 - Photo 1",
-        "description": "Photo 1 du projet 1"
-      },
-      {
-          "id": 3,
-          "url": "assets/img/projects/project1.jpg",
-          "title": "Projet 1 - Photo 2",
-          "description": "Photo 2 du projet 1"
-      }
-    ],
     "title": "Projet 1",
     "sizeWidth": 1000,
     "sizeHeight": 800,
     "collection": {
       "id": 1,
-      "title": "Collection 1"
+      "title": "City"
     },
     "date": "2022-04-01",
-    "reference": "REF-001"
+    "reference": "REF-001",
+    "thumbnail": {
+      "id": 1,
+      "url": "assets/img/projects/project1.jpg",
+      "title": "London Big Ben",
+      "description": "Miniature du projet 1"
+    },
+    "photos": [
+      {
+        "id": 2,
+        "url": "assets/img/projects/project1-2.jpg",
+        "title": "",
+        "description": ""
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Toulouse",
+    "photos": [],
+    "sizeWidth": 1000,
+    "sizeHeight": 800,
+    "collection": {
+      "id": 1,
+      "title": "City"
+    },
+    "date": "2022-04-01",
+    "reference": "REF-001",
+    "thumbnail": {
+      "id": 1,
+      "url": "assets/img/projects/project2.jpg",
+      "title": "Image à la une de Toulouse",
+      "description": ""
+    }
   }
 ]

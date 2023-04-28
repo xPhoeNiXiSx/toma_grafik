@@ -1,0 +1,24 @@
+@use 'src/assets/scss/variables' as *;
+
+.project {
+  &-container {
+    padding: 3rem;
+  }
+  &-item {
+    width: 60vw;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    flex: 1;
+  }
+  &__description {
+    padding: 2rem;
+    border: 1px solid var(--color-gold);
+  }
+}

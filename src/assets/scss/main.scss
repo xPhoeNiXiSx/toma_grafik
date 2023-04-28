@@ -1,9 +1,4 @@
-:root {
-  --color-bg: #101010;
-  --color-white: #EEEEEE;
-  --color-gold: #C68200;
-  --ff: 'Short Stack', Arial, sans-serif;
-}
+@use 'variables' as *;
 
 html {
   font-size: 62.5%;
