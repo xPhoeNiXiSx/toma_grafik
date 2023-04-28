@@ -1,9 +1,2 @@
-<h2>Liste des projets</h2>
-<ul>
-  <li *ngFor="let project of projects">
-    <h3>{{ project.title }}</h3>
-    <p>{{ project.collection.title }}</p>
-    <p>{{ project.date | date }}</p>
-    <img *ngIf="project.thumbnail.url !== ''" [src]="project.thumbnail.url" alt="{{ project.thumbnail.title }}">
-  </li>
-</ul>
+<app-header></app-header>
+<app-project-list></app-project-list>
