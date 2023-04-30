@@ -9,7 +9,8 @@ import { ProjectService } from 'src/app/services/project/project.service';
 })
 export class ProjectListComponent implements OnInit {
 
-  projects: Project[];
+  projects: Project[] = [];
+  selectedIndex = 0;
 
   constructor(
     private projectService: ProjectService,
@@ -23,5 +24,20 @@ export class ProjectListComponent implements OnInit {
     this.projectService.getProjects().subscribe(projects => this.projects = projects);
   }
 
+  public prevProject(): void {
+    if(this.selectedIndex === 0) {
+      this.selectedIndex = this.projects.length - 1;
+    } else {
+      this.selectedIndex --;
+    }
+  }
+
+  public nextProject(): void {
+    if(this.selectedIndex === this.projects.length - 1) {
+      this.selectedIndex = 0;
+    } else {
+      this.selectedIndex ++;
+    }
+  }
 
 }

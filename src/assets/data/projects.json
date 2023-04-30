@@ -9,7 +9,7 @@
       "title": "City"
     },
     "date": "2022-04-01",
-    "reference": "REF-001",
+    "reference": "",
     "thumbnail": {
       "id": 1,
       "url": "assets/img/projects/project1.jpg",
@@ -36,11 +36,30 @@
       "title": "City"
     },
     "date": "2022-04-01",
-    "reference": "REF-001",
+    "reference": "",
     "thumbnail": {
       "id": 1,
       "url": "assets/img/projects/project2.jpg",
       "title": "Image à la une de Toulouse",
+      "description": ""
+    }
+  },
+  {
+    "id": 3,
+    "title": "Nantes",
+    "photos": [],
+    "sizeWidth": 1000,
+    "sizeHeight": 800,
+    "collection": {
+      "id": 1,
+      "title": "City"
+    },
+    "date": "2022-04-01",
+    "reference": "",
+    "thumbnail": {
+      "id": 1,
+      "url": "assets/img/projects/project3.jpg",
+      "title": "Image à la une de Nantes",
       "description": ""
     }
   }

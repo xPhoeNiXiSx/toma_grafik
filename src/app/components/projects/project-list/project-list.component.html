@@ -1,26 +1,37 @@
-<div class="project-container">
-  <div class="project-list">
-    <div *ngFor="let project of projects" class="project-item">
-      <div class="project__thumbnail">
-        <img height="600" *ngIf="project.thumbnail.url !== ''" [src]="project.thumbnail.url" alt="{{ project.thumbnail.title }}">
-      </div>
-      <div class="project__content">
-        <div class="project__description">
-          <h1>{{ project.title }}</h1>
-          <p>{{ project.sizeWidth }}</p>
-          <p>{{ project.sizeHeight }}</p>
-          <p>{{ project.collection.title }}</p>
-          <p>{{ project.date | date }}</p>
+<div class="project-carousel" *ngIf="projects?.length !== 0">
+  <div 
+    class="project-carousel__wrap" 
+    [style.width]="'calc(' + projects.length + '*100vw)'"
+    [style.transform]="'translateX(calc(-' + selectedIndex + ' * 15vw))'"
+  >
+    <ng-container *ngFor="let project of projects; let i=index">
+      <div class="project-carousel__item" [class.is-active]="selectedIndex === i">
+        <div class="project">
+          <div class="project__thumbnail">
+            <img height="600" *ngIf="project.thumbnail.url !== ''" [src]="project.thumbnail.url" alt="{{ project.thumbnail.title }}">
+          </div>
+          <div class="project__content">
+            <div class="project__description">
+              <h1>{{ project.title }}</h1>
+              <p>{{ project.sizeWidth }}</p>
+              <p>{{ project.sizeHeight }}</p>
+              <p>{{ project.collection.title }}</p>
+              <p>{{ project.date | date }}</p>
+            </div>
+            <div *ngFor="let photo of project.photos" class="project__photos">
+              <img height="100" *ngIf="photo.url !== ''" [src]="photo.url" alt="{{ photo.title }} - {{ photo.description }}">
+            </div>
+          </div>
         </div>
-        <div *ngFor="let photo of project.photos" class="project__photos">
-          <img height="100" *ngIf="photo.url !== ''" [src]="photo.url" alt="{{ photo.title }} - {{ photo.description }}">
-        </div>
       </div>
-    </div>
+    </ng-container>
   </div>
-  <ul>
-    <li *ngFor="let project of projects">
-      
-    </li>
-  </ul>
+  <div class="project-carousel__nav">
+    <button class="btn btn-icon" (click)="prevProject()">
+      <img src="assets/img/arrow-left.svg" alt="">
+    </button>
+    <button class="btn btn-icon" (click)="nextProject()">
+      <img src="assets/img/arrow-right.svg" alt="">
+    </button>
+  </div>
 </div>

@@ -1,15 +1,13 @@
 @use 'src/assets/scss/variables' as *;
+@use 'src/assets/scss/animate' as *;
 
 .project {
-  &-container {
-    padding: 3rem;
-  }
-  &-item {
-    width: 60vw;
-    margin: 0 auto;
-    display: flex;
-    align-items: flex-start;
-    gap: 3rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;
+  &__thumbnail {
+    transition: all .5s ease-in;
+    transform: scale(0.45);
   }
   &__content {
     display: flex;
@@ -20,5 +18,51 @@
   &__description {
     padding: 2rem;
     border: 1px solid var(--color-gold);
+    display: none;
+  }
+  &__photos {
+    display: none; 
+  }
+}
+
+
+.project-carousel {
+  width: 100vw;
+  overflow: hidden;
+  &__wrap {
+    display: flex;
+    margin-left: 15vw;
+    transition: all .5s ease-in;
+  }
+  &__item {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 15vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    opacity: 0.3;
+    transition: all .5s ease-in;
+
+    // Active
+    &.is-active {
+      opacity: 1;
+      flex-basis: 70vw;
+      .project__thumbnail {
+        transform: scale(1);
+        transition: all .5s ease-in;
+      }
+    }
+  }
+  &__nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 3rem;
   }
 }
