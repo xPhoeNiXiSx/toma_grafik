@@ -22,6 +22,12 @@
         "url": "assets/img/projects/project1-2.jpg",
         "title": "",
         "description": ""
+      },
+      {
+        "id": 3,
+        "url": "assets/img/projects/project1-3.jpg",
+        "title": "",
+        "description": ""
       }
     ]
   },

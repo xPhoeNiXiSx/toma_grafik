@@ -40,4 +40,13 @@ export class ProjectListComponent implements OnInit {
     }
   }
 
+  public goToProject(index: number): void {
+    this.selectedIndex = index;
+  }
+
+  public autoSliding(): void {
+    setInterval(() => { 
+      this.nextProject()
+    }, 2000);
+  }
 }

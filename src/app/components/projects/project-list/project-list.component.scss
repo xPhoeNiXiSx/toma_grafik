@@ -4,27 +4,73 @@
 .project {
   display: flex;
   align-items: flex-start;
-  gap: 3rem;
+  width: 100%;
+  padding: 1rem;
+  overflow: hidden;
   &__thumbnail {
     transition: all .5s ease-in;
-    transform: scale(0.45);
+    transform: scale(0.45) translateX(-20%);
+    position: relative;
+    flex: 0 0 480px;
+    &:before {
+      content: '';
+      position: absolute;
+      inset: -1rem;
+      border: 1px solid var(--color-gold);
+    }
   }
   &__content {
-    display: flex;
     flex-direction: column;
     gap: 3rem;
-    flex: 1;
+    padding: 4rem 3rem;
+    flex: 1 0 50%;
+    display: flex;
+    opacity: 0;
+    transition: opacity 0s .3s ease-in;
   }
+  &__title {}
   &__description {
     padding: 2rem;
     border: 1px solid var(--color-gold);
-    display: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    p {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.8rem;
+      span {
+        font-size: 1.4rem;
+      }
+    }
   }
   &__photos {
-    display: none; 
+    display: flex;
+    gap: 1.5rem;
+    .btn {
+      transition: all .3s ease-in-out;
+      opacity: 0.6;
+      transform: scale(0.95);
+      &:hover,
+      &:focus {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
   }
 }
 
+.project-counter {
+  position: fixed;
+  top: 4rem;
+  right: 4rem;
+  font-size: 1.6rem;
+  text-align: right;
+  span {
+    font-size: 2.4rem;
+    margin-right: 0.5rem;
+  }
+}
 
 .project-carousel {
   width: 100vw;
@@ -38,10 +84,11 @@
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: 15vw;
+    width: 15vw;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    // overflow: hidden;
     opacity: 0.3;
     transition: all .5s ease-in;
 
@@ -49,9 +96,14 @@
     &.is-active {
       opacity: 1;
       flex-basis: 70vw;
+      width: 70vw;
       .project__thumbnail {
         transform: scale(1);
         transition: all .5s ease-in;
+      }
+      .project__content {
+        opacity: 1;
+        transition: opacity 2s .3s ease-in;
       }
     }
   }
