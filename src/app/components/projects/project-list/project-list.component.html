@@ -12,6 +12,7 @@
         <div class="project">
           <div class="project__thumbnail">
             <img height="600" *ngIf="project.thumbnail.url !== ''" [src]="project.thumbnail.url" alt="{{ project.thumbnail.title }}">
+            <!-- <img height="600" *ngIf="project.photos" [src]="getPhotoThumbnail(project)" alt=""> -->
           </div>
           <div class="project__content">
             <h1 class="project__title">{{ project.title }}</h1>
@@ -21,7 +22,12 @@
               <p><span>Creation date</span>{{ project.date | date }}</p>
             </div>
             <div class="project__photos">
-              <button class="btn" *ngFor="let photo of project.photos">
+              <button 
+                class="btn" 
+                *ngFor="let photo of project.photos; let j=index" 
+                [class.is-active]="project.thumbnail.url === photo.url"
+                (click)="goToPhoto(j,project)"
+              >
                 <img height="100" *ngIf="photo.url !== ''" [src]="photo.url" alt="{{ photo.title }} - {{ photo.description }}">
               </button>
             </div>

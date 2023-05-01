@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "title": "Projet 1",
+    "title": "London Big Ben",
     "sizeWidth": 1000,
     "sizeHeight": 800,
     "collection": {
@@ -18,14 +18,14 @@
     },
     "photos": [
       {
-        "id": 2,
-        "url": "assets/img/projects/project1-2.jpg",
-        "title": "",
-        "description": ""
+        "id": 1,
+        "url": "assets/img/projects/project1.jpg",
+        "title": "London Big Ben",
+        "description": "Miniature du projet 1"
       },
       {
-        "id": 3,
-        "url": "assets/img/projects/project1-3.jpg",
+        "id": 2,
+        "url": "assets/img/projects/project1-2.jpg",
         "title": "",
         "description": ""
       }
@@ -34,7 +34,14 @@
   {
     "id": 2,
     "title": "Toulouse",
-    "photos": [],
+    "photos": [
+      {
+        "id": 1,
+        "url": "assets/img/projects/project2.jpg",
+        "title": "",
+        "description": ""
+      }
+    ],
     "sizeWidth": 1000,
     "sizeHeight": 800,
     "collection": {
@@ -53,7 +60,14 @@
   {
     "id": 3,
     "title": "Nantes",
-    "photos": [],
+    "photos": [
+      {
+        "id": 1,
+        "url": "assets/img/projects/project3.jpg",
+        "title": "",
+        "description": ""
+      }
+    ],
     "sizeWidth": 1000,
     "sizeHeight": 800,
     "collection": {

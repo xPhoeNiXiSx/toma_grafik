@@ -44,6 +44,14 @@ export class ProjectListComponent implements OnInit {
     this.selectedIndex = index;
   }
 
+  public goToPhoto(index: number, project: Project) {
+    project.thumbnail = project.photos?.[index];
+  }
+
+  public getPhotoThumbnail(project: Project) {
+    return project.photos?.[0].url;
+  }
+
   public autoSliding(): void {
     setInterval(() => { 
       this.nextProject()

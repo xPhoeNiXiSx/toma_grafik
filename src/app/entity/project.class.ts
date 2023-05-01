@@ -4,7 +4,7 @@ import { Photo } from "../interface/photo.interface";
 export class Project {
   id: number;
   thumbnail: Photo;
-  photos?: [Photo];
+  photos: [Photo];
   title: string;
   sizeWidth: number;
   sizeHeight: number;
