@@ -53,7 +53,7 @@ export class ProjectListComponent implements OnInit {
   }
 
   public autoSliding(): void {
-    setInterval(() => { 
+    setInterval(() => {
       this.nextProject()
     }, 2000);
   }
