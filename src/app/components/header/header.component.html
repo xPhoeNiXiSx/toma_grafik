@@ -14,7 +14,10 @@
   <a href="/">
     <img src="assets/img/logo.svg" height="100" alt="">
   </a>
-  <div class="header__counter">
-  
+  <div class="header__toggle">
+    <button class="btn" (click)="toggleMenu()">
+      <img src="assets/img/home.svg" height="50" alt="">
+    </button>
   </div>
 </header>
+<app-menu [isOpen]="isOpen"></app-menu>

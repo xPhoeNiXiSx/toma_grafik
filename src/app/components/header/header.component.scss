@@ -1,9 +1,12 @@
 .header {
   display: flex;
   width: 100%;
-  align-items: start;
+  align-items: center;
   justify-content: space-between;
   padding: 4rem 6rem;
+  position: relative;
+  z-index: 100;
+  background: var(--color-bg);
   &__socials {
     display: flex;
     gap: 3rem;
