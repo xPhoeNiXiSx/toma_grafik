@@ -10,6 +10,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { ProjectItemComponent } from './components/projects/project-item/project-item.component';
 import { HomeComponent } from './components/home/home.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { SectionSocialComponent } from './components/home/section-social/section-social.component';
+import { SectionStartComponent } from './components/home/section-start/section-start.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { MenuComponent } from './components/menu/menu.component';
     ProjectItemComponent,
     HomeComponent,
     MenuComponent,
+    SectionSocialComponent,
+    SectionStartComponent,
   ],
   imports: [
     BrowserModule,

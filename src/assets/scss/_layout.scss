@@ -1,0 +1,9 @@
+.section {
+  min-height: 50vh;
+  &.section-start {
+    min-height: 100vh;
+  }
+  &.section-socials {
+    background: var(--color-white);
+  }
+}
