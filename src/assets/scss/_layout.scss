@@ -1,5 +1,9 @@
 .section {
   min-height: 50vh;
+  height: 100vh;
+  h2 {
+    font-size: 6rem;
+  }
   &.section-start {
     min-height: 100vh;
   }
