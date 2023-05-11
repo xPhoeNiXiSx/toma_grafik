@@ -12,6 +12,7 @@ import { HomeComponent } from './components/home/home.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { SectionSocialComponent } from './components/home/section-social/section-social.component';
 import { SectionStartComponent } from './components/home/section-start/section-start.component';
+import { LastComponent } from './components/home/last/last.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { SectionStartComponent } from './components/home/section-start/section-s
     MenuComponent,
     SectionSocialComponent,
     SectionStartComponent,
+    LastComponent,
   ],
   imports: [
     BrowserModule,

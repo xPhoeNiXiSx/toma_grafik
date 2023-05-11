@@ -9,6 +9,8 @@ body {
   font-family: var(--ff);
   color: var(--color-white);
   background: var(--color-bg);
+  background-image: url('~src/assets/img/background.jpg');
+  background-attachment: fixed;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -19,3 +21,4 @@ h1, h2, h3, h4, h5, h6 {
 @import 'scroll';
 @import 'layout';
 @import 'buttons';
+@import 'layout';
