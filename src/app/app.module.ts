@@ -10,9 +10,9 @@ import { HeaderComponent } from './components/header/header.component';
 import { ProjectItemComponent } from './components/projects/project-item/project-item.component';
 import { HomeComponent } from './components/home/home.component';
 import { MenuComponent } from './components/menu/menu.component';
-import { SectionStartComponent } from './components/home/section-start/section-start.component';
 import { LastComponent } from './components/home/last/last.component';
 import { CollectionsComponent } from './components/home/collections/collections.component';
+import { OneComponent } from './components/home/one/one.component';
 
 @NgModule({
   declarations: [
@@ -22,9 +22,9 @@ import { CollectionsComponent } from './components/home/collections/collections.
     ProjectItemComponent,
     HomeComponent,
     MenuComponent,
-    SectionStartComponent,
     LastComponent,
     CollectionsComponent,
+    OneComponent,
   ],
   imports: [
     BrowserModule,

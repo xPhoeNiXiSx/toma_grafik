@@ -37,6 +37,7 @@ ul {
       color: var(--color-golden);
       position: relative;
       overflow: hidden;
+      transition: color .3s ease-in-out;
       &:before {
         content: '';
         position: absolute;
