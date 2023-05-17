@@ -1,3 +1,5 @@
+@use 'src/assets/scss/mixins' as *;
+
 .header {
   &__nav {
     position: fixed;
@@ -48,10 +50,23 @@
   }
   &__socials {
     position: fixed;
-    top: 4.8rem;
-    right: 4.8rem;
     display: flex;
     align-items: center;
-    gap: 2.4rem;
+    top: 1.6rem;
+    right: 1.6rem;
+    gap: 1.6rem;
+    z-index: 480;
+    a {
+      display: block;
+      > img {
+        width: 2.4rem;
+        height: 2.4rem;
+      }
+    }
+    @include breakpoint('sm') {
+      top: 4.8rem;
+      right: 4.8rem;
+      gap: 2.4rem;
+    }
   }
 }
