@@ -15,10 +15,15 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--ff);
+  color: var(--color-white);
+}
+
+a {
+  color: var(--color-gold);
+  text-decoration: none;
 }
 
 @import 'reset';
 @import 'scroll';
 @import 'layout';
 @import 'buttons';
-@import 'layout';

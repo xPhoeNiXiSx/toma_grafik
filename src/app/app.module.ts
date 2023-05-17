@@ -13,6 +13,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { SectionSocialComponent } from './components/home/section-social/section-social.component';
 import { SectionStartComponent } from './components/home/section-start/section-start.component';
 import { LastComponent } from './components/home/last/last.component';
+import { CollectionsComponent } from './components/home/collections/collections.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { LastComponent } from './components/home/last/last.component';
     SectionSocialComponent,
     SectionStartComponent,
     LastComponent,
+    CollectionsComponent,
   ],
   imports: [
     BrowserModule,
