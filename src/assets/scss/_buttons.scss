@@ -7,6 +7,48 @@
   &:hover, &:focus {
     cursor: pointer;
   }
+
+  &.btn-border {
+    color: var(--color-white);
+    border: 1px solid var(--color-gold);
+    min-height: 3.2rem;
+    line-height: 4rem;
+    padding: 0.4rem 2.4rem;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    &:before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      background: var(--color-gold);
+      inset: 0;
+      transition: transform .4s ease-in-out, opacity .3s .1s ease-in-out;
+      opacity: 0;
+      transform: translateX(115%);
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      border: 1px solid var(--color-white);
+      inset: 0;
+      transition: all .4s ease-in-out;
+      opacity: 0;
+      transform: scale(1);
+    }
+    &:hover, &:focus {
+      &::before {
+        transform: translateX(0);
+        opacity: 1;
+      }
+      &::after {
+        transform: scale(0.95);
+        opacity: 1;
+      }
+    }
+  }
+
 }
 
 .btn-icon {
