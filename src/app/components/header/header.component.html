@@ -1,23 +1,40 @@
-<header class="header">
-  <ul class="header__socials">
+<header class="header__nav">
+  <ul>
     <li>
-      <a href="/">
-        <img src="assets/img/behance.svg" height="30" alt="">
+      <a href="">My work</a>
+    </li>
+    <li>
+      <a href="">About</a>
+    </li>
+    <li>
+      <a class="nav-menu" [routerLink]="'/'">
+        <img src="assets/img/logo.png" height="100" alt="">
       </a>
     </li>
     <li>
-      <a href="/">
-        <img src="assets/img/instagram.svg" height="30" alt="">
-      </a>
+      <a href="">Process</a>
+    </li>
+    <li>
+      <a href="">Contact</a>
     </li>
   </ul>
-  <a [routerLink]="'/'">
-    <img src="assets/img/logo.svg" height="100" alt="">
-  </a>
   <div class="header__toggle">
-    <button class="btn" (click)="toggleMenu()">
-      <img src="assets/img/home.svg" height="50" alt="">
-    </button>
   </div>
 </header>
-<app-menu [isOpen]="isOpen"></app-menu>
+<!-- <button class="btn" (click)="toggleMenu()">
+  <img src="assets/img/home.svg" height="50" alt="">
+</button> -->
+<!-- <app-menu [isOpen]="isOpen"></app-menu> -->
+
+<ul class="header__socials">
+  <li>
+    <a href="/">
+      <img src="assets/img/behance.svg" height="30" alt="">
+    </a>
+  </li>
+  <li>
+    <a href="/">
+      <img src="assets/img/instagram.svg" height="30" alt="">
+    </a>
+  </li>
+</ul>

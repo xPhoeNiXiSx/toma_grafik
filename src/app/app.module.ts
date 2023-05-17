@@ -10,7 +10,6 @@ import { HeaderComponent } from './components/header/header.component';
 import { ProjectItemComponent } from './components/projects/project-item/project-item.component';
 import { HomeComponent } from './components/home/home.component';
 import { MenuComponent } from './components/menu/menu.component';
-import { SectionSocialComponent } from './components/home/section-social/section-social.component';
 import { SectionStartComponent } from './components/home/section-start/section-start.component';
 import { LastComponent } from './components/home/last/last.component';
 import { CollectionsComponent } from './components/home/collections/collections.component';
@@ -23,7 +22,6 @@ import { CollectionsComponent } from './components/home/collections/collections.
     ProjectItemComponent,
     HomeComponent,
     MenuComponent,
-    SectionSocialComponent,
     SectionStartComponent,
     LastComponent,
     CollectionsComponent,
