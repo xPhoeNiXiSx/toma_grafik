@@ -1,0 +1,51 @@
+.section {
+  display: flex;
+  align-items: center;
+  position: relative;
+  &__left,
+  &__right {
+    flex: 1;
+  }
+  &__left {
+    padding: 0 10rem;
+    .logo {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 4rem;
+    }
+    h1 {
+      font-size: 8rem;
+      margin-bottom: 4rem;
+    }
+  }
+}
+
+.block {
+  background: var(--color-white);
+  opacity: 0.05;
+  position: fixed;
+  &.first {
+    left: -5.6rem;
+    top: 19rem;
+    width: 26rem;
+    height: 26rem;
+  }
+  &.second {
+    top: 4rem;
+    right: -4rem;
+    width: 33rem;
+    height: 33rem;
+  }
+  &.third {
+    bottom: -3.4rem;
+    right: 5rem;
+    width: 15rem;
+    height: 15rem;
+  }
+  &.fourth {
+    left: 50%;
+    top: 50%;
+    width: 12rem;
+    height: 12rem;
+  }
+}
