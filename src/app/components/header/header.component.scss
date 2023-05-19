@@ -47,6 +47,88 @@
         }
       }
     }
+
+
+    @include breakpoint(sm) {
+      &__mobile {
+        position: fixed;
+        inset: auto 0 0 0;
+        z-index: 500;
+        .nav-menu {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 0.6rem;
+          height: 6rem;
+          width: 6rem;
+          border-radius: 6rem;
+          overflow: hidden;
+          padding: 1.2rem;
+          background: #07070A;
+          border: 1px solid var(--color-gold);
+          z-index: 2;
+          position: relative;
+          margin: 0 auto 2rem auto;
+          .bar {
+            height: 1px;
+            width: 2.4rem;
+            background: var(--color-white);
+            display: block;
+            transition: all .3s ease-in-out;
+            &:nth-child(1) {
+              transform-origin: center;
+            }
+            &:nth-child(3) {
+              transform-origin: center;
+            }
+          }
+          &.open {
+            .bar {
+              &:nth-child(1) {
+                transform: rotate(45deg) translateY(5px) translateX(5px);
+              }
+              &:nth-child(2) {
+                opacity: 0;
+              }
+              &:nth-child(3) {
+                transform: rotate(-45deg) translateY(-5px) translateX(5px);
+              }
+            }
+          }
+        }
+        ul {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background: var(--color-gold);
+          z-index: 1;
+          transition: all .5s ease-in-out;
+          overflow: hidden;
+          max-height: 0;
+          li:last-child {
+            margin-bottom: 8rem;
+          }
+          a {
+            display: block;
+            color: var(--color-white);
+            text-align: center;
+            padding: 1.6rem;
+          }
+        }
+        &.open {
+          ul {
+            max-height: 100vh;
+            overflow: visible;
+          }
+        }
+      }
+    }
+
+
   }
   &__socials {
     position: fixed;
@@ -63,10 +145,12 @@
         height: 2.4rem;
       }
     }
-    @include breakpoint('sm') {
+    @include breakpoint-min(sm) {
       top: 4.8rem;
       right: 4.8rem;
       gap: 2.4rem;
     }
   }
 }
+
+

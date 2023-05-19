@@ -6,7 +6,7 @@
   position: relative;
   flex-direction: column;
   padding-bottom: 4rem;
-  @include breakpoint('sm') {
+  @include breakpoint-min(sm) {
     flex-direction: row;
     padding-bottom: 0;
   }
@@ -18,14 +18,14 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    @include breakpoint('sm') {
+    @include breakpoint-min(sm) {
       padding: 0 10rem;
     }
     .logo {
       display: flex;
       justify-content: center;
-      
-      @include breakpoint('sm') {
+
+      @include breakpoint-min(sm) {
         margin-bottom: 4rem;
         > img {
           height: 10rem;
@@ -34,7 +34,7 @@
     }
     h1 {
       font-size: 2.4rem;
-      @include breakpoint('sm') {
+      @include breakpoint-min(sm) {
         margin-bottom: 4rem;
         font-size: 8rem;
       }
