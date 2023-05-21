@@ -18,8 +18,14 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: 1.6rem 0;
+    flex: 0 0 auto;
+    gap: 1.6rem;
+    position: relative;
+    z-index: 30;
     @include breakpoint-min(sm) {
-      padding: 0 10rem;
+      padding: 0 10rem 5rem 10rem;
+      flex: 1;
     }
     .logo {
       display: flex;
@@ -43,6 +49,8 @@
 
   &__right {
     padding: 4rem 8rem;
+    position: relative;
+    z-index: -1;
   }
 
 }
@@ -57,23 +65,95 @@
     top: 19rem;
     width: 26rem;
     height: 26rem;
+    @include breakpoint(md) {
+      width: 20vw;
+    }
   }
   &.second {
     top: 4rem;
     right: -4rem;
     width: 33rem;
     height: 33rem;
+    @include breakpoint(md) {
+      width: 20vw;
+    }
   }
   &.third {
     bottom: -3.4rem;
     right: 5rem;
     width: 15rem;
     height: 15rem;
+    @include breakpoint(md) {
+      width: 15vh;
+    }
   }
   &.fourth {
     left: 50%;
     top: 50%;
     width: 12rem;
     height: 12rem;
+    @include breakpoint(md) {
+      width: 10vw;
+      top: 0;
+      left: 10vw;
+    }
+  }
+}
+
+.lines {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 20;
+  div[class^="line"] svg {
+    fill: none;
+    stroke: var(--color-golden);
+    position: absolute;
+  }
+  .line-1 {
+    width: 65vw;
+    top: 30vh;
+    position: relative;
+    &::before, &::after {
+      content: '';
+      display: block;
+      transform: translate3d(0, -50%, 0) scale(0);
+      border-radius: 50%;
+      position: absolute;
+      z-index: 2;
+      opacity: 0;
+      transition: all .5s 1.2s ease-in;
+    }
+    &::before {
+      width: 2.4rem;
+      height: 2.4rem;      
+      background: var(--color-white);
+      right: 0;
+      border: 2px solid var(--color-golden);
+    }
+    &::after {
+      width: 1.2rem;
+      height: 1.2rem;
+      background: var(--color-yellow);
+      right: .8rem;
+      top: 0;
+    }
+    svg {
+      stroke-dasharray: 1500;
+      stroke-dashoffset: -1500;
+      transition: stroke-dashoffset 1.5s cubic-bezier(1,.61,1,.74);
+      &.animated {
+        stroke-dashoffset: -3000;
+      }
+    }
+    &:has(svg.animated) {
+      &::before,
+      &::after {
+        transform: translate3d(0, -50%, 0) scale(1);
+        opacity: 1;
+      }
+    }
   }
 }

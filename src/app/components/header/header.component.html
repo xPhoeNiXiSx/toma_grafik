@@ -1,4 +1,4 @@
-<header class="header__nav__mobile" [class.open]="isOpen">
+<header class="header__nav__mobile d-block d-md-none" [class.open]="isOpen">
   <a class="nav-menu" [class.open]="isOpen" (click)="toggleMenu()">
     <span class="bar"></span>
     <span class="bar"></span>
@@ -31,16 +31,18 @@
       </a>
     </li>
   </ul>
-  <!-- <ul>
+</header>
+<header class="header__nav d-none d-md-flex align-items-center justify-content-center" [class.open]="isOpen">
+  <ul>
     <li>
       <a href="">
-        <img class="d-block d-sm-none" src="assets/img/icons/work.svg" height="32"/>
+        <!-- <img class="d-block d-sm-none" src="assets/img/icons/work.svg" height="32"/> -->
         <span class="d-none d-sm-block">My work</span>
       </a>
     </li>
     <li>
       <a href="">
-        <img class="d-block d-sm-none" src="assets/img/icons/user.svg" height="32"/>
+        <!-- <img class="d-block d-sm-none" src="assets/img/icons/user.svg" height="32"/> -->
         <span class="d-none d-sm-block">About</span>
       </a>
     </li>
@@ -51,17 +53,17 @@
     </li>
     <li>
       <a href="">
-        <img class="d-block d-sm-none" src="assets/img/icons/step.svg" height="32"/>
+        <!-- <img class="d-block d-sm-none" src="assets/img/icons/step.svg" height="32"/> -->
         <span class="d-none d-sm-block">Process</span>
       </a>
     </li>
     <li>
       <a href="">
-        <img class="d-block d-sm-none" src="assets/img/icons/contact.svg" height="32"/>
+        <!-- <img class="d-block d-sm-none" src="assets/img/icons/contact.svg" height="32"/> -->
         <span class="d-none d-sm-block">Contact</span>
       </a>
     </li>
-  </ul> -->
+  </ul>
 </header>
 <!-- <button class="btn" (click)="toggleMenu()">
   <img src="assets/img/home.svg" height="50" alt="">
