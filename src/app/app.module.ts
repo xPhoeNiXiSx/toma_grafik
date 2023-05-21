@@ -13,6 +13,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { LastComponent } from './components/home/last/last.component';
 import { CollectionsComponent } from './components/home/collections/collections.component';
 import { OneComponent } from './components/home/one/one.component';
+import { IconComponent } from './components/icon/icon.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { OneComponent } from './components/home/one/one.component';
     LastComponent,
     CollectionsComponent,
     OneComponent,
+    IconComponent,
   ],
   imports: [
     BrowserModule,
