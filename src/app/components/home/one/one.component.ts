@@ -7,13 +7,17 @@ import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angula
 })
 export class OneComponent implements OnInit {
   @ViewChild('line1') public line1: ElementRef;
+  @ViewChild('line2') public line2: ElementRef;
 
   constructor() { }
 
   ngOnInit(): void {
     setTimeout(() => {
       this.line1.nativeElement.classList.add('animated');
-    }, 500)
+    }, 500);
+    setTimeout(() => {
+      this.line2.nativeElement.classList.add('animated');
+    }, 3000);
   }
 
 }
