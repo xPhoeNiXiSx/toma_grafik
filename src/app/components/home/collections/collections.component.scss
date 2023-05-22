@@ -1,7 +1,12 @@
+@use 'src/assets/scss/mixins' as *;
+
 .section {
-  padding: 0 12rem 0 0;
+  padding: 0 4rem 0 0;
   display: flex;
   flex-direction: column;
+  @include breakpoint-min(sm) {
+    padding: 0 12rem 0 0;
+  }
   &__header {
     padding: 5rem 8rem 5rem 12rem;
     border-right: 1px solid var(--color-gold);

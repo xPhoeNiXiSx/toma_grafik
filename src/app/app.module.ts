@@ -14,6 +14,9 @@ import { LastComponent } from './components/home/last/last.component';
 import { CollectionsComponent } from './components/home/collections/collections.component';
 import { OneComponent } from './components/home/one/one.component';
 import { IconComponent } from './components/icon/icon.component';
+import { WorkComponent } from './components/work/work.component';
+import { AboutComponent } from './components/about/about.component';
+import { ProcessComponent } from './components/process/process.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +30,9 @@ import { IconComponent } from './components/icon/icon.component';
     CollectionsComponent,
     OneComponent,
     IconComponent,
+    WorkComponent,
+    AboutComponent,
+    ProcessComponent,
   ],
   imports: [
     BrowserModule,
