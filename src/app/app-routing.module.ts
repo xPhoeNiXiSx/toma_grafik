@@ -8,25 +8,29 @@ import { AboutComponent } from './components/about/about.component';
 import { ProcessComponent } from './components/process/process.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CollectionsComponent } from './components/collections/collections.component';
+import { CollectionDetailComponent } from './components/collections/collection-detail/collection-detail.component';
 
 const routes: Routes = [
   {
-    path: '', 
+    path: '',
     pathMatch: 'full' ,
     redirectTo: '/home'
   },
   {
-    path: 'home', 
-    component: HomeComponent, 
+    path: 'home',
+    component: HomeComponent,
     data: { animation: 'HomePage' }
   },
-  { 
-    path: 'projects', 
+  { path: 'collections', component: CollectionsComponent, data: { animation: 'CollectionsPage' }},
+  { path: 'collections/:slug', component: CollectionsComponent, data: { animation: 'CollectionDetailPage' }},
+  {
+    path: 'projects',
     component: ProjectListComponent,
     data: { animation: 'ProjectPage' }
   },
   {
-    path: 'work', 
+    path: 'work',
     component: WorkComponent,
     data: { animation: 'WorkPage' }
   },

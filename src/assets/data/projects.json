@@ -4,10 +4,12 @@
     "title": "London Big Ben",
     "sizeWidth": 1000,
     "sizeHeight": 800,
-    "collection": {
+    "collection": [
+      {
       "id": 1,
-      "title": "City"
-    },
+      "title": "house"
+      }
+    ],
     "date": "2022-04-01",
     "reference": "",
     "thumbnail": {

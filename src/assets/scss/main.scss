@@ -20,6 +20,13 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-white);
 }
 
+h1 {
+  font-size: 8rem;
+  span {
+    color: var(--color-gold);
+  }
+}
+
 a {
   color: var(--color-gold);
   text-decoration: none;

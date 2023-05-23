@@ -12,13 +12,15 @@ import { ProjectItemComponent } from './components/projects/project-item/project
 import { HomeComponent } from './components/home/home.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { LastComponent } from './components/home/last/last.component';
-import { CollectionsComponent } from './components/home/collections/collections.component';
 import { OneComponent } from './components/home/one/one.component';
 import { IconComponent } from './components/icon/icon.component';
 import { WorkComponent } from './components/work/work.component';
 import { AboutComponent } from './components/about/about.component';
 import { ProcessComponent } from './components/process/process.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { CollectionsModule } from './components/collections/collections.module';
+import { RouterModule } from '@angular/router';
+import { HomeCollectionsComponent } from './components/home/home-collections/home-collections.component';
 
 @NgModule({
   declarations: [
@@ -29,19 +31,21 @@ import { ContactComponent } from './components/contact/contact.component';
     HomeComponent,
     MenuComponent,
     LastComponent,
-    CollectionsComponent,
     OneComponent,
     IconComponent,
     WorkComponent,
     AboutComponent,
     ProcessComponent,
     ContactComponent,
+    HomeCollectionsComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
+    CollectionsModule,
+    RouterModule
   ],
   providers: [
     ProjectService

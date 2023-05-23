@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, map } from 'rxjs';
 import { Project } from '../../entity/project.class';
 
 @Injectable({
@@ -13,5 +13,20 @@ export class ProjectService {
 
   getProjects(): Observable<Project[]> {
     return this.http.get<Project[]>(this.projectsUrl);
+  }
+
+  getCollectionProjects(slug: string): Observable<Project[]> {
+    return this.http.get<Project[]>(this.projectsUrl)
+    .pipe(
+      map(projects => {
+        return projects.filter(project => {
+          if(project.collection instanceof Array) {
+            return project.collection.some(item => item.title === slug)
+          } else {
+            return;
+          }
+        });
+      })
+    )
   }
 }

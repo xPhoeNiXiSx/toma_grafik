@@ -15,3 +15,10 @@
     background: var(--color-white);
   }
 }
+
+.section-page {
+  padding: 0;
+  .section__header {
+    padding: 4rem 0;
+  }
+}

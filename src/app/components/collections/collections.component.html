@@ -1,0 +1,10 @@
+<section class="section section-page">
+  <div class="container">
+    <div class="section__header">
+      <h1>Collection <span>{{ collectionSlug }}</span></h1>
+    </div>
+    <ng-container *ngFor="let project of collectionProjects; let i=index">
+      <app-collection-detail [project]="project"></app-collection-detail>
+    </ng-container>
+  </div>
+</section>
