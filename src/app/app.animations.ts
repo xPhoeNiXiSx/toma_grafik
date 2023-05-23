@@ -1,35 +1,38 @@
 import { trigger, style, animate, transition, query, group, animateChild } from '@angular/animations';
+import { fadeInOutTransition } from './app.transition';
 
 const enterTransition = transition(':enter', [
   style({
     opacity: 0
   }),
-  animate('1s ease-in', style({ opacity: 1 })),
+  animate('0.5s ease-in', style({ opacity: 1 })),
 ]);
 
 const exitTransition = transition(':leave', [
   style({
     opacity: 1
   }),
-  animate('1s ease-out', style({ opacity: 0 })),
+  animate('0.5s ease-out', style({ opacity: 0 })),
 ]);
 
 export const fadeIn = trigger('fadeIn',[enterTransition]);
 export const fadeOut = trigger('fadeOut',[exitTransition]);
+export const fadeInOutPage = trigger('routeAnimations', [fadeInOutTransition]);
+
 export const slideInAnimation = trigger('routeAnimations', [
   transition('* => *', [
-    query(':enter, :leave', 
-      style({ position: 'fixed',  width: '100%' }), 
+    query(':enter, :leave',
+      style({ position: 'fixed',  width: '100%' }),
       { optional: true }),
     group([
       query(':enter', [
-        style({ transform: 'translateX(100%)' }), 
-        animate('0.5s ease-in-out', 
+        style({ transform: 'translateX(100%)' }),
+        animate('0.5s ease-in-out',
         style({ transform: 'translateX(0%)' }))
       ], { optional: true }),
       query(':leave', [
         style({ transform: 'translateX(0%)' }),
-        animate('0.5s ease-in-out', 
+        animate('0.5s ease-in-out',
         style({ transform: 'translateX(-100%)' }))
       ], { optional: true }),
     ])

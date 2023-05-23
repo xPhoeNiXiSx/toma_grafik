@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { fadeIn, fadeOut, slideInAnimation } from './app.animations';
+import { fadeIn, fadeInOutPage, fadeOut } from './app.animations';
 import { ChildrenOutletContexts, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  animations: [fadeIn, fadeOut, slideInAnimation],
+  animations: [fadeIn, fadeOut, fadeInOutPage],
 })
 export class AppComponent implements OnInit {
   isShown = false;
