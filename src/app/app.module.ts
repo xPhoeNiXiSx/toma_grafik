@@ -39,7 +39,7 @@ import { NotfoundComponent } from './components/notfound/notfound.component';
     ProcessComponent,
     ContactComponent,
     HomeCollectionsComponent,
-    NotfoundComponent
+    NotfoundComponent,
   ],
   imports: [
     BrowserModule,
