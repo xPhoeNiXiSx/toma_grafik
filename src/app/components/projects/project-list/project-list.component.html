@@ -1,22 +1,24 @@
-<div class="project-carousel animate__animated animate__fadeIn animate__slower" *ngIf="projects?.length !== 0">
-  <div class="project-counter">
-    <span>{{ selectedIndex + 1 }}</span>/ {{ projects.length }}
+<section class="section">
+  <div class="project-carousel animate__animated animate__fadeIn animate__slower" *ngIf="projects?.length !== 0">
+    <div class="project-counter">
+      <span>{{ selectedIndex + 1 }}</span>/ {{ projects.length }}
+    </div>
+    <div
+      class="project-carousel__wrap"
+      [style.width]="'calc(' + projects.length + '*100vw)'"
+      [style.transform]="'translateX(calc(-' + selectedIndex + ' * 15vw))'"
+    >
+      <ng-container *ngFor="let project of projects; let i=index">
+        <app-project-item [project]="project" [isActive]="selectedIndex === i "></app-project-item>
+      </ng-container>
+    </div>
+    <div class="project-carousel__nav">
+      <button class="btn btn-icon" (click)="prevProject()">
+        <img src="assets/img/arrow-left.svg" alt="">
+      </button>
+      <button class="btn btn-icon" (click)="nextProject()">
+        <img src="assets/img/arrow-right.svg" alt="">
+      </button>
+    </div>
   </div>
-  <div
-    class="project-carousel__wrap"
-    [style.width]="'calc(' + projects.length + '*100vw)'"
-    [style.transform]="'translateX(calc(-' + selectedIndex + ' * 15vw))'"
-  >
-    <ng-container *ngFor="let project of projects; let i=index">
-      <app-project-item [project]="project" [isActive]="selectedIndex === i "></app-project-item>
-    </ng-container>
-  </div>
-  <div class="project-carousel__nav">
-    <button class="btn btn-icon" (click)="prevProject()">
-      <img src="assets/img/arrow-left.svg" alt="">
-    </button>
-    <button class="btn btn-icon" (click)="nextProject()">
-      <img src="assets/img/arrow-right.svg" alt="">
-    </button>
-  </div>
-</div>
+</section>

@@ -8,6 +8,7 @@ import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angula
 export class OneComponent implements OnInit {
   @ViewChild('line1') public line1: ElementRef;
   @ViewChild('line2') public line2: ElementRef;
+  @ViewChild('line3') public line3: ElementRef;
 
   constructor() { }
 
@@ -17,7 +18,10 @@ export class OneComponent implements OnInit {
     }, 500);
     setTimeout(() => {
       this.line2.nativeElement.classList.add('animated');
-    }, 3000);
+    }, 2000);
+    setTimeout(() => {
+      this.line3.nativeElement.classList.add('animated');
+    }, 1000);
   }
 
 }
