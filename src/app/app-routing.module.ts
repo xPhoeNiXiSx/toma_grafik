@@ -10,45 +10,23 @@ import { ContactComponent } from './components/contact/contact.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CollectionsComponent } from './components/collections/collections.component';
 import { CollectionDetailComponent } from './components/collections/collection-detail/collection-detail.component';
+import { NotfoundComponent } from './components/notfound/notfound.component';
 
 const routes: Routes = [
   {
     path: '',
     pathMatch: 'full' ,
-    redirectTo: '/home'
+    redirectTo: 'home'
   },
-  {
-    path: 'home',
-    component: HomeComponent,
-    data: { animation: 'HomePage' }
-  },
+  { path: 'home', component: HomeComponent, data: { animation: 'HomePage' }},
   { path: 'collections', component: CollectionsComponent, data: { animation: 'CollectionsPage' }},
   { path: 'collections/:slug', component: CollectionsComponent, data: { animation: 'CollectionDetailPage' }},
-  {
-    path: 'projects',
-    component: ProjectListComponent,
-    data: { animation: 'ProjectPage' }
-  },
-  {
-    path: 'work',
-    component: WorkComponent,
-    data: { animation: 'WorkPage' }
-  },
-  {
-    path: 'about',
-    component: AboutComponent,
-    data: { animation: 'AboutPage' }
-  },
-  {
-    path: 'process',
-    component: ProcessComponent,
-    data: { animation: 'ProcessPage' }
-  },
-  {
-    path: 'contact',
-    component: ContactComponent,
-    data: { animation: 'ContactPage' }
-  },
+  { path: 'projects', component: ProjectListComponent, data: { animation: 'ProjectPage' }},
+  { path: 'work', component: WorkComponent, data: { animation: 'WorkPage' }},
+  { path: 'about', component: AboutComponent, data: { animation: 'AboutPage' }},
+  { path: 'process', component: ProcessComponent, data: { animation: 'ProcessPage' }},
+  { path: 'contact', component: ContactComponent, data: { animation: 'ContactPage' }},
+  { path: '**', pathMatch: 'full', component: NotfoundComponent },
 ];
 
 @NgModule({

@@ -21,6 +21,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { CollectionsModule } from './components/collections/collections.module';
 import { RouterModule } from '@angular/router';
 import { HomeCollectionsComponent } from './components/home/home-collections/home-collections.component';
+import { NotfoundComponent } from './components/notfound/notfound.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { HomeCollectionsComponent } from './components/home/home-collections/hom
     AboutComponent,
     ProcessComponent,
     ContactComponent,
-    HomeCollectionsComponent
+    HomeCollectionsComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,
