@@ -24,8 +24,8 @@
     position: relative;
     z-index: 30;
     @include breakpoint-min(sm) {
-      padding: 0 10rem 5rem 10rem;
-      flex: 1;
+      padding: 0 8rem 5rem 8rem;
+      flex: 0 0 60%;
       align-items: center;
     }
     .logo {
@@ -49,9 +49,13 @@
   }
 
   &__right {
-    padding: 4rem 4rem 4rem 8rem;
+    padding: 4rem;
     position: relative;
     z-index: -1;
+    .thumbnail {
+      display: flex;
+      justify-content: flex-start;
+    }
   }
 
 }
