@@ -4,12 +4,7 @@
     "title": "London Big Ben",
     "sizeWidth": 1000,
     "sizeHeight": 800,
-    "collection": [
-      {
-      "id": 1,
-      "title": "house"
-      }
-    ],
+    "collection": "house",
     "date": "2022-04-01",
     "reference": "",
     "thumbnail": {
@@ -46,10 +41,7 @@
     ],
     "sizeWidth": 1000,
     "sizeHeight": 800,
-    "collection": {
-      "id": 1,
-      "title": "City"
-    },
+    "collection": "city",
     "date": "2022-04-01",
     "reference": "",
     "thumbnail": {
@@ -72,10 +64,7 @@
     ],
     "sizeWidth": 1000,
     "sizeHeight": 800,
-    "collection": {
-      "id": 1,
-      "title": "City"
-    },
+    "collection": "city",
     "date": "2022-04-01",
     "reference": "",
     "thumbnail": {

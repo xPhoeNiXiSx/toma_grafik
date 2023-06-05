@@ -20,10 +20,19 @@ export class CollectionsComponent implements OnInit {
 
   ngOnInit(): void {
     this.collectionSlug = this.route.snapshot.paramMap.get('slug');
+    if(this.collectionSlug) {
+      this.getCollectionProjects(this.collectionSlug);
+    }
+    console.log(this.collectionSlug);
   }
 
   getCollectionProjects(slug: string): void {
-    this.projectService.getCollectionProjects(slug).subscribe(projects => this.collectionProjects = projects);
+    this.projectService.getCollectionProjects(slug).subscribe(
+      projects => {
+        this.collectionProjects = projects;
+        console.log(projects);
+      }
+    );
   }
 
 }

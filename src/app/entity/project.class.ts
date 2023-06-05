@@ -8,7 +8,8 @@ export class Project {
   title: string;
   sizeWidth: number;
   sizeHeight: number;
-  collection: Collection;
+  collection: string;
+  // collection: Collection;
   date: Date;
   reference: string;
 }
