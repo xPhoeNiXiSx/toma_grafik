@@ -6,27 +6,27 @@
   </a>
   <ul>
     <li>
-      <a href="">
+      <a [routerLink]="'/'" routerLinkActive="is-active">
         <span>Home</span>
       </a>
     </li>
     <li>
-      <a href="">
+      <a [routerLink]="'/work'" routerLinkActive="is-active">
         <span>My work</span>
       </a>
     </li>
     <li>
-      <a href="">
+      <a [routerLink]="'/about'" routerLinkActive="is-active">
         <span>About</span>
       </a>
     </li>
     <li>
-      <a href="">
+      <a [routerLink]="'/process'" routerLinkActive="is-active">
         <span>Process</span>
       </a>
     </li>
     <li>
-      <a href="">
+      <a [routerLink]="'/contact'" routerLinkActive="is-active">
         <span>Contact</span>
       </a>
     </li>
@@ -35,31 +35,27 @@
 <header class="header__nav d-none d-md-flex align-items-center justify-content-center" [class.open]="isOpen">
   <ul>
     <li>
-      <a [routerLink]="'/work'">
-        <!-- <img class="d-block d-sm-none" src="assets/img/icons/work.svg" height="32"/> -->
+      <a [routerLink]="'/work'" routerLinkActive="is-active">
         <span class="d-none d-sm-block">My work</span>
       </a>
     </li>
     <li>
-      <a [routerLink]="'/about'">
-        <!-- <img class="d-block d-sm-none" src="assets/img/icons/user.svg" height="32"/> -->
+      <a [routerLink]="'/about'" routerLinkActive="is-active">
         <span class="d-none d-sm-block">About</span>
       </a>
     </li>
     <li>
-      <a class="nav-menu" [routerLink]="'/'">
+      <a class="nav-menu" [routerLink]="'/'" routerLinkActive="is-active">
         <img src="assets/img/logo.png" height="100" alt="">
       </a>
     </li>
     <li>
-      <a [routerLink]="'/process'">
-        <!-- <img class="d-block d-sm-none" src="assets/img/icons/step.svg" height="32"/> -->
+      <a [routerLink]="'/process'" routerLinkActive="is-active">
         <span class="d-none d-sm-block">Process</span>
       </a>
     </li>
     <li>
-      <a [routerLink]="'/contact'">
-        <!-- <img class="d-block d-sm-none" src="assets/img/icons/contact.svg" height="32"/> -->
+      <a [routerLink]="'/contact'" routerLinkActive="is-active">
         <span class="d-none d-sm-block">Contact</span>
       </a>
     </li>
