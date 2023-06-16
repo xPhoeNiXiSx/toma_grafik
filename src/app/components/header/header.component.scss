@@ -11,6 +11,15 @@
     ul {
       display: flex;
       align-items: center;
+      position: relative;
+      &:before {
+        content: '';
+        z-index: -1;
+        position: absolute;
+        inset: 1rem 0;
+        background: var(--color-dark);
+        border-radius: 3rem;
+      }
       li {
         padding: 0 2rem;
         a {

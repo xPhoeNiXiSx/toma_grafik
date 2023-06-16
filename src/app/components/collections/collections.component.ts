@@ -9,9 +9,10 @@ import { ProjectService } from 'src/app/services/project/project.service';
   styleUrls: ['./collections.component.scss']
 })
 export class CollectionsComponent implements OnInit {
-
   public collectionSlug: string | null;
   public collectionProjects: Project[] = [];
+  public collectionProjectsFiltered: Project[] = [];
+  public filter: string = '';
 
   constructor(
     private route: ActivatedRoute,
@@ -30,9 +31,25 @@ export class CollectionsComponent implements OnInit {
     this.projectService.getCollectionProjects(slug).subscribe(
       projects => {
         this.collectionProjects = projects;
+        this.collectionProjectsFiltered = projects;
         console.log(projects);
       }
     );
+  }
+
+  public filterReinit(): void {
+    this.collectionProjectsFiltered = this.collectionProjects;
+    this.filter = '';
+  }
+
+  public filterBlack(): void {
+    this.collectionProjectsFiltered = this.collectionProjects.filter( project => project.black);
+    this.filter = 'black';
+  }
+
+  public filterColored(): void {
+    this.collectionProjectsFiltered = this.collectionProjects.filter( project => !project.black);
+    this.filter = 'colored';
   }
 
 }

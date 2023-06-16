@@ -6,6 +6,7 @@ export class Project {
   thumbnail: Photo;
   photos: [Photo];
   title: string;
+  black: boolean;
   sizeWidth: number;
   sizeHeight: number;
   collection: string;
