@@ -15,13 +15,28 @@ export class ProjectService {
     return this.http.get<Project[]>(this.projectsUrl);
   }
 
+  // getCollectionProjects(slug: string): Observable<Project[]> {
+  //   return this.http.get<Project[]>(this.projectsUrl)
+  //   .pipe(
+  //     map(projects => {
+  //       return projects.filter(project => {
+  //         if(project.collection instanceof Array) {
+  //           return project.collection.some(item => item.title === slug)
+  //         } else {
+  //           return;
+  //         }
+  //       });
+  //     })
+  //   )
+  // }
+
   getCollectionProjects(slug: string): Observable<Project[]> {
     return this.http.get<Project[]>(this.projectsUrl)
     .pipe(
       map(projects => {
         return projects.filter(project => {
-          if(project.collection instanceof Array) {
-            return project.collection.some(item => item.title === slug)
+          if(project.collection === slug) {
+            return project;
           } else {
             return;
           }
@@ -29,4 +44,5 @@ export class ProjectService {
       })
     )
   }
+
 }

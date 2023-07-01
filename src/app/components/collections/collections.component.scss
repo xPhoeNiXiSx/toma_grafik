@@ -1,0 +1,17 @@
+@import 'src/assets/scss/components/filters';
+
+.collection-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  flex-wrap: wrap;
+  grid-column-gap: 3rem;
+  grid-row-gap: 3rem;
+  app-collection-detail {
+    &:nth-child(2) {
+      margin-top: 6rem;
+    }
+    &:nth-child(3) {
+      margin-bottom: 6rem;
+    }
+  }
+}

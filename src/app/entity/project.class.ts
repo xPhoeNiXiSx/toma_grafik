@@ -6,9 +6,11 @@ export class Project {
   thumbnail: Photo;
   photos: [Photo];
   title: string;
+  black: boolean;
   sizeWidth: number;
   sizeHeight: number;
-  collection: Collection;
+  collection: string;
+  // collection: Collection;
   date: Date;
   reference: string;
 }
