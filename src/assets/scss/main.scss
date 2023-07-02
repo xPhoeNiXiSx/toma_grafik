@@ -1,5 +1,6 @@
 @use 'variables' as *;
 @use 'mixins' as *;
+@use 'fonts' as *;
 
 html {
   font-size: 62.5%;
@@ -10,8 +11,6 @@ body {
   font-family: var(--ff);
   color: var(--color-white);
   background: var(--color-bg);
-  background-image: url('~src/assets/img/background.jpg');
-  background-attachment: fixed;
   overflow-x: hidden;
 }
 
@@ -42,6 +41,10 @@ img.img-responsive {
 
 @import 'reset';
 @import 'scroll';
+
+@import 'header';
 @import 'layout';
 @import 'buttons';
 @import 'icon';
+@import 'page-header';
+@import 'page-menu';

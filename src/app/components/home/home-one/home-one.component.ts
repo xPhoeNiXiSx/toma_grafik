@@ -2,11 +2,11 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import * as AOS from 'aos';
 
 @Component({
-  selector: 'app-one',
-  templateUrl: './one.component.html',
-  styleUrls: ['./one.component.scss']
+  selector: 'app-home-one',
+  templateUrl: './home-one.component.html',
+  styleUrls: ['./home-one.component.scss']
 })
-export class OneComponent implements OnInit {
+export class HomeOneComponent implements OnInit {
   @ViewChild('line1') public line1: ElementRef;
   @ViewChild('line2') public line2: ElementRef;
   @ViewChild('line3') public line3: ElementRef;

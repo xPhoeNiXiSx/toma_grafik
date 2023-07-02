@@ -1,3 +1,33 @@
-<app-one></app-one>
-<app-last></app-last>
-<app-home-collections></app-home-collections>
+<section id="section-one" class="page is-one">
+  <!-- <div class="block first"></div>
+  <div class="block second"></div>
+  <div class="block third"></div>
+  <div class="block fourth"></div> -->
+  <div class="page__section">
+    <p data-aos="fade-right" data-aos-delay="400" class="new">Nouveau</p>
+    <h1 data-aos="fade-right" data-aos-delay="600">Nantes sketches collection</h1>
+    <a data-aos="fade-right" data-aos-delay="800" [routerLink]="'/projects'" class="btn btn-primary">Voir la collection</a>
+  </div>
+  <div class="page__section" data-aos="fade-left" data-aos-delay="800">
+    <div class="carousel">
+      <div class="carousel__container">
+        <div class="carousel__item active">
+          <div class="thumbnail">
+            <img class="img-responsive" src="assets/img/one/1.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page__menu">
+    <a title="" [routerLink]="'/collections'" class="btn btn-primary">
+      Collections
+    </a>
+    <a title="" class="btn btn-primary">
+      A propos
+    </a>
+    <a title="" class="btn btn-primary">
+      Contact
+    </a>
+  </div>
+</section>

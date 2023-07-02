@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Project } from 'src/app/entity/project.class';
 import { ProjectService } from 'src/app/services/project/project.service';
 
 @Component({
-  selector: 'app-collections',
-  templateUrl: './collections.component.html',
-  styleUrls: ['./collections.component.scss']
+  selector: 'app-collection-item',
+  templateUrl: './collection-item.component.html',
+  styleUrls: ['./collection-item.component.scss']
 })
-export class CollectionsComponent implements OnInit {
-  public collectionSlug: string | null;
+export class CollectionItemComponent implements OnInit {
+  @Input() collectionSlug:string;
+  @Input() collectionNumber:string;
   public collectionProjects: Project[] = [];
   public collectionProjectsFiltered: Project[] = [];
   public filter: string = '';
@@ -20,21 +21,28 @@ export class CollectionsComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.collectionSlug = this.route.snapshot.paramMap.get('slug');
+    // this.collectionSlug = this.route.snapshot.paramMap.get('slug');
     if(this.collectionSlug) {
       this.getCollectionProjects(this.collectionSlug);
     }
-    console.log(this.collectionSlug);
+    // console.log(this.collectionSlug);
   }
 
   getCollectionProjects(slug: string): void {
     this.projectService.getCollectionProjects(slug).subscribe(
       projects => {
         this.collectionProjects = projects;
-        this.collectionProjectsFiltered = projects;
-        console.log(projects);
+        console.log(this.collectionProjects);
+        // this.collectionProjectsFiltered = projects;
       }
     );
+    // this.projectService.getCollectionProjects(slug).subscribe(
+    //   projects => {
+    //     this.collectionProjects = projects;
+    //     // this.collectionProjectsFiltered = projects;
+    //     // console.log(projects);
+    //   }
+    // );
   }
 
   public filterReinit(): void {

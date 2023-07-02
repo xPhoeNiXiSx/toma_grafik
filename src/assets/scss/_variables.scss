@@ -1,12 +1,15 @@
 :root {
-  --color-bg: #101010;
-  --color-dark: #101010;
+  --color-bg: #070709;
+  --color-blue: #121821;
   --color-white: #FFFFFF;
   --color-grey: #EEEEEE;
   --color-gold: #8F5F00;
   --color-golden: #C29C5B;
   --color-yellow: #FFC700;
-  --ff: 'Short Stack', Arial, sans-serif;
+  --ff: 'Solway', Arial, sans-serif;
+
+  --h-header: 8rem;
+
 }
 
 $breakpoint-xs: 480px;

@@ -10,9 +10,7 @@ import { ProjectListComponent } from './components/projects/project-list/project
 import { HeaderComponent } from './components/header/header.component';
 import { ProjectItemComponent } from './components/projects/project-item/project-item.component';
 import { HomeComponent } from './components/home/home.component';
-import { MenuComponent } from './components/menu/menu.component';
 import { LastComponent } from './components/home/last/last.component';
-import { OneComponent } from './components/home/one/one.component';
 import { IconComponent } from './components/icon/icon.component';
 import { WorkComponent } from './components/work/work.component';
 import { AboutComponent } from './components/about/about.component';
@@ -22,6 +20,7 @@ import { CollectionsModule } from './components/collections/collections.module';
 import { RouterModule } from '@angular/router';
 import { HomeCollectionsComponent } from './components/home/home-collections/home-collections.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
+import { HomeOneComponent } from './components/home/home-one/home-one.component';
 
 @NgModule({
   declarations: [
@@ -30,9 +29,8 @@ import { NotfoundComponent } from './components/notfound/notfound.component';
     HeaderComponent,
     ProjectItemComponent,
     HomeComponent,
-    MenuComponent,
     LastComponent,
-    OneComponent,
+    HomeOneComponent,
     IconComponent,
     WorkComponent,
     AboutComponent,

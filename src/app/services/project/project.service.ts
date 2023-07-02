@@ -31,18 +31,18 @@ export class ProjectService {
   // }
 
   getCollectionProjects(slug: string): Observable<Project[]> {
-    return this.http.get<Project[]>(this.projectsUrl)
-    .pipe(
-      map(projects => {
-        return projects.filter(project => {
-          if(project.collection === slug) {
-            return project;
-          } else {
-            return;
-          }
-        });
-      })
-    )
+    return this.http.get<Project[]>('assets/data/'+slug+'.json')
+    // .pipe(
+    //   map(projects => {
+    //     return projects.filter(project => {
+    //       // if(project.collection === slug) {
+    //         return project;
+    //       // } else {
+    //       //   return;
+    //       // }
+    //     });
+    //   })
+    // )
   }
 
 }

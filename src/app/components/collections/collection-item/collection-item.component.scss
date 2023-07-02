@@ -1,0 +1,33 @@
+.collection {
+  &-item {
+    display: flex;
+    align-items: flex-end;
+    gap: 4rem;
+    padding-bottom: 3rem;
+    margin-bottom: 4rem;
+    border-bottom: 1px solid var(--color-white);
+  }
+  &-title {
+    flex: 0 0 15rem;
+    h2 {
+      &::first-letter {
+        text-transform: uppercase;
+      }
+      font-size: 3.2rem;
+    }
+    .number {
+      font-family: 'Srisakdi';
+      font-size: 1.6rem;
+      margin-bottom: 0.8rem;
+    }
+  }
+  &-content {
+    display: flex;
+    align-items: flex-end;
+    gap: 4rem;
+    flex: 1;
+    app-collection-detail {
+      max-width: 15rem;
+    }
+  }
+}

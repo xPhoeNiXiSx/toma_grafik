@@ -8,9 +8,9 @@ import { AboutComponent } from './components/about/about.component';
 import { ProcessComponent } from './components/process/process.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CollectionsComponent } from './components/collections/collections.component';
-import { CollectionDetailComponent } from './components/collections/collection-detail/collection-detail.component';
+// import { CollectionsComponent } from './components/collections/collections.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
+import { CollectionPageComponent } from './components/collections/collection-page/collection-page.component';
 
 const routes: Routes = [
   {
@@ -19,8 +19,8 @@ const routes: Routes = [
     redirectTo: 'home'
   },
   { path: 'home', component: HomeComponent, data: { animation: 'HomePage' }},
-  { path: 'collections', component: CollectionsComponent, data: { animation: 'CollectionsPage' }},
-  { path: 'collections/:slug', component: CollectionsComponent, data: { animation: 'CollectionDetailPage' }},
+  { path: 'collections', component: CollectionPageComponent, data: { animation: 'CollectionsPage' }},
+  // { path: 'collections/:slug', component: CollectionsComponent, data: { animation: 'CollectionDetailPage' }},
   { path: 'projects', component: ProjectListComponent, data: { animation: 'ProjectPage' }},
   { path: 'work', component: WorkComponent, data: { animation: 'WorkPage' }},
   { path: 'about', component: AboutComponent, data: { animation: 'AboutPage' }},

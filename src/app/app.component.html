@@ -1,6 +1,4 @@
-<!-- <button (click)="fadeInOut()">Test</button>
-<h1 *ngIf="isShown" @fadeIn @fadeOut>Test fadeIn</h1> -->
-<div [@routeAnimations]="prepareRoute(outlet)">
+<main [@routeAnimations]="prepareRoute(outlet)">
   <app-header></app-header>
   <router-outlet #outlet="outlet"></router-outlet>
-</div>
+</main>

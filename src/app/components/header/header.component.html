@@ -1,4 +1,12 @@
-<header class="header__nav__mobile d-block d-md-none" [class.open]="isOpen">
+<header class="header">
+  <a title="" [routerLink]="'/'" class="header-logo" data-aos="fade-right" data-aos-delay="500">
+    <img src="assets/img/logo.svg" height="40" alt="">
+  </a>
+  <div class="header-menu">
+    <button class="btn">Menu</button>
+  </div>
+</header>
+<!-- <header class="header__nav__mobile d-block d-md-none" [class.open]="isOpen">
   <a class="nav-menu" [class.open]="isOpen" (click)="toggleMenu()">
     <span class="bar"></span>
     <span class="bar"></span>
@@ -60,20 +68,4 @@
       </a>
     </li>
   </ul>
-</header>
-<!-- <button class="btn" (click)="toggleMenu()">
-  <img src="assets/img/home.svg" height="50" alt="">
-</button> -->
-<!-- <app-menu [isOpen]="isOpen"></app-menu> -->
-<!-- <ul class="header__socials">
-  <li>
-    <a href="/">
-      <img src="assets/img/behance.svg" height="30" alt="">
-    </a>
-  </li>
-  <li>
-    <a href="/">
-      <img src="assets/img/instagram.svg" height="30" alt="">
-    </a>
-  </li>
-</ul> -->
+</header> -->

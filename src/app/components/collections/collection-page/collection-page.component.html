@@ -1,0 +1,16 @@
+<section id="page-collection" class="page">
+  <div class="page__header">
+    <h1>Collections</h1>
+    <!-- <div class="page__filters">
+      <button [class.is-active]="filter === ''" class="btn" (click)="filterReinit()">Tous</button>
+      <button [class.is-active]="filter === 'black'" class="btn" (click)="filterBlack()">Maison</button>
+      <button [class.is-active]="filter === 'colored'" class="btn" (click)="filterColored()">Nature</button>
+      <button [class.is-active]="filter === 'colored'" class="btn" (click)="filterColored()">Ville</button>
+    </div> -->
+  </div>
+  <div class="collection-container">
+    <ng-container *ngFor="let collection of collections; let i=index">
+      <app-collection-item [collectionSlug]="collection.name" [collectionNumber]="collection.id"></app-collection-item>
+    </ng-container>
+  </div>
+</section>

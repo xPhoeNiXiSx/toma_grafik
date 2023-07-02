@@ -1,16 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { CollectionsComponent } from './collections.component';
+import { CollectionItemComponent } from './collection-item/collection-item.component';
 import { CollectionDetailComponent } from './collection-detail/collection-detail.component';
 
 import { ProjectService } from 'src/app/services/project/project.service';
+import { CollectionPageComponent } from './collection-page/collection-page.component';
 
 
 @NgModule({
   declarations: [
-    CollectionsComponent,
-    CollectionDetailComponent
+    CollectionItemComponent,
+    CollectionDetailComponent,
+    CollectionPageComponent
   ],
   imports: [
     CommonModule
@@ -18,6 +20,6 @@ import { ProjectService } from 'src/app/services/project/project.service';
   providers: [
     ProjectService
   ],
-  bootstrap: [CollectionsComponent]
+  bootstrap: []
 })
 export class CollectionsModule { }
