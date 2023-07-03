@@ -1,12 +1,12 @@
 .page {
-  padding-top: var(--h-header);
-  height: 100dvh;
+  height: calc( 100dvh - var(--h-header));
   width: 100vw;
   overflow: hidden;
   &.is-one {
     display: flex;
     width: 100vw;
     position: relative;
+    padding-bottom: 6rem;
     div[class^='page__s'] {
       flex: 1;
       display: flex;

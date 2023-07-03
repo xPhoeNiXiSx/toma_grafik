@@ -11,8 +11,7 @@
     text-align: center;
   }
   &__thumbnail {
-    width: 15rem;
-    height: 20rem;
+    // height: 20rem;
     overflow: hidden;
   }
   img {
@@ -22,13 +21,13 @@
     opacity: 1;
     transition: all .5s ease-in-out;
   }
-  &:hover {
-    cursor: pointer;
-    h2 {
-      opacity: 1;
-    }
-    img {
-      opacity: 0.6;
-    }
-  }
+  // &:hover {
+  //   cursor: pointer;
+  //   h2 {
+  //     opacity: 1;
+  //   }
+  //   img {
+  //     opacity: 0.6;
+  //   }
+  // }
 }

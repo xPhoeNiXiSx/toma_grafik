@@ -5,6 +5,7 @@
   margin: 0;
   background: transparent;
   color: var(--color-white);
+  font-family: var(--ff);
   &:hover, &:focus {
     cursor: pointer;
   }

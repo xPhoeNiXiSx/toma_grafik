@@ -9,21 +9,29 @@ export class CollectionPageComponent implements OnInit {
   public filter = "";
   public collections = [
     {
-      name :'projects',
+      name :'houses',
       id : '01',
     },
     {
-        name :'nantes',
-        id: '02'
+      name :'japan',
+      id : '02',
     },
     {
-        name :'london',
-        id: '03'
+      name :'projects',
+      id : '03',
     },
-    {
-        name :'toulouse',
-        id: '04'
-    }
+    // {
+    //     name :'nantes',
+    //     id: '02'
+    // },
+    // {
+    //     name :'london',
+    //     id: '03'
+    // },
+    // {
+    //     name :'toulouse',
+    //     id: '04'
+    // }
   ];
 
   constructor() { }

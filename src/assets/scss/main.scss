@@ -11,7 +11,7 @@ body {
   font-family: var(--ff);
   color: var(--color-white);
   background: var(--color-bg);
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -21,6 +21,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 8rem;
+  font-family: 'CrimsonText';
   span {
     color: var(--color-gold);
   }

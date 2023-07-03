@@ -6,6 +6,7 @@
     padding-bottom: 3rem;
     margin-bottom: 4rem;
     border-bottom: 1px solid var(--color-white);
+    min-height: 29rem;
   }
   &-title {
     flex: 0 0 15rem;
@@ -27,7 +28,14 @@
     gap: 4rem;
     flex: 1;
     app-collection-detail {
-      max-width: 15rem;
+      max-width: 18rem;
+      transform: scale(1);
+      transform-origin: bottom center;
+      transition: all .5s ease-in-out;
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+      }
     }
   }
 }

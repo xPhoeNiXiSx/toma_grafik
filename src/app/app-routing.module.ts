@@ -20,7 +20,7 @@ const routes: Routes = [
   },
   { path: 'home', component: HomeComponent, data: { animation: 'HomePage' }},
   { path: 'collections', component: CollectionPageComponent, data: { animation: 'CollectionsPage' }},
-  // { path: 'collections/:slug', component: CollectionsComponent, data: { animation: 'CollectionDetailPage' }},
+  { path: 'collections/:slug', component: ProjectListComponent, data: { animation: 'CollectionDetailPage' }},
   { path: 'projects', component: ProjectListComponent, data: { animation: 'ProjectPage' }},
   { path: 'work', component: WorkComponent, data: { animation: 'WorkPage' }},
   { path: 'about', component: AboutComponent, data: { animation: 'AboutPage' }},

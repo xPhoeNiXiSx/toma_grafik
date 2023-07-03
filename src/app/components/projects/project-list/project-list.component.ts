@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Project } from 'src/app/entity/project.class';
 import { ProjectService } from 'src/app/services/project/project.service';
 
@@ -8,20 +9,25 @@ import { ProjectService } from 'src/app/services/project/project.service';
   styleUrls: ['./project-list.component.scss']
 })
 export class ProjectListComponent implements OnInit {
-
+  public collectionSlug: string;
   projects: Project[] = [];
   selectedIndex = 0;
 
   constructor(
+    private route: ActivatedRoute,
     private projectService: ProjectService,
   ) {}
 
   ngOnInit(): void {
-    this.getProjects();
+    const routeSlug = this.route.snapshot.paramMap.get('slug');
+    if(routeSlug) {
+      this.collectionSlug = routeSlug;
+      this.getProjects();
+    }
   }
 
   getProjects(): void {
-    this.projectService.getProjects().subscribe(projects => this.projects = projects);
+    this.projectService.getCollectionProjects(this.collectionSlug).subscribe(projects => this.projects = projects);
   }
 
   public prevProject(): void {
