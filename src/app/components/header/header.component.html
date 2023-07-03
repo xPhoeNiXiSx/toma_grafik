@@ -3,69 +3,7 @@
     <img src="assets/img/logo.svg" height="40" alt="">
   </a>
   <div class="header-menu">
-    <button class="btn">Menu</button>
+    <button class="btn" (click)="toggleMenu()">Menu</button>
   </div>
 </header>
-<!-- <header class="header__nav__mobile d-block d-md-none" [class.open]="isOpen">
-  <a class="nav-menu" [class.open]="isOpen" (click)="toggleMenu()">
-    <span class="bar"></span>
-    <span class="bar"></span>
-    <span class="bar"></span>
-  </a>
-  <ul>
-    <li>
-      <a [routerLink]="'/'" routerLinkActive="is-active">
-        <span>Home</span>
-      </a>
-    </li>
-    <li>
-      <a [routerLink]="'/work'" routerLinkActive="is-active">
-        <span>My work</span>
-      </a>
-    </li>
-    <li>
-      <a [routerLink]="'/about'" routerLinkActive="is-active">
-        <span>About</span>
-      </a>
-    </li>
-    <li>
-      <a [routerLink]="'/process'" routerLinkActive="is-active">
-        <span>Process</span>
-      </a>
-    </li>
-    <li>
-      <a [routerLink]="'/contact'" routerLinkActive="is-active">
-        <span>Contact</span>
-      </a>
-    </li>
-  </ul>
-</header>
-<header class="header__nav d-none d-md-flex align-items-center justify-content-center" [class.open]="isOpen">
-  <ul>
-    <li>
-      <a [routerLink]="'/work'" routerLinkActive="is-active">
-        <span class="d-none d-sm-block">My work</span>
-      </a>
-    </li>
-    <li>
-      <a [routerLink]="'/about'" routerLinkActive="is-active">
-        <span class="d-none d-sm-block">About</span>
-      </a>
-    </li>
-    <li>
-      <a class="nav-menu" [routerLink]="'/'" routerLinkActive="is-active">
-        <img src="assets/img/logo.png" height="100" alt="">
-      </a>
-    </li>
-    <li>
-      <a [routerLink]="'/process'" routerLinkActive="is-active">
-        <span class="d-none d-sm-block">Process</span>
-      </a>
-    </li>
-    <li>
-      <a [routerLink]="'/contact'" routerLinkActive="is-active">
-        <span class="d-none d-sm-block">Contact</span>
-      </a>
-    </li>
-  </ul>
-</header> -->
+<app-menu [isOpen]="isOpen"></app-menu>

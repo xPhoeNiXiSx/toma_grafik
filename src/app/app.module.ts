@@ -21,6 +21,7 @@ import { RouterModule } from '@angular/router';
 import { HomeCollectionsComponent } from './components/home/home-collections/home-collections.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { HomeOneComponent } from './components/home/home-one/home-one.component';
+import { MenuComponent } from './components/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { HomeOneComponent } from './components/home/home-one/home-one.component'
     ContactComponent,
     HomeCollectionsComponent,
     NotfoundComponent,
+    MenuComponent,
   ],
   imports: [
     BrowserModule,

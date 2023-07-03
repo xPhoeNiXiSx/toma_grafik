@@ -10,7 +10,8 @@ body {
   font-size: 1.4rem;
   font-family: var(--ff);
   color: var(--color-white);
-  background: var(--color-bg);
+  background: var(--color-bg) url(../img/bg.jpg) center center no-repeat;
+  background-size: cover;
   overflow: hidden;
 }
 
@@ -28,7 +29,7 @@ h1 {
 }
 
 a {
-  color: var(--color-gold);
+  color: var(--color-white);
   text-decoration: none;
   &:hover, &:focus {
     cursor: pointer;
