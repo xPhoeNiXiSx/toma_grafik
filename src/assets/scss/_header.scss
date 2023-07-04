@@ -1,10 +1,11 @@
 .header {
   position:sticky;
+  z-index: 600;
   inset: 0 0 auto 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 4rem;
+  padding: 1.5rem 3vw;
   height: var(--h-header);
   color: var(--color-white);
 }

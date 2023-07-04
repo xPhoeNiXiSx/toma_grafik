@@ -7,6 +7,10 @@
     width: 100vw;
     position: relative;
     padding-bottom: 6rem;
+    @include breakpoint(md) {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
     div[class^='page__s'] {
       flex: 1;
       display: flex;
@@ -14,7 +18,13 @@
       align-items: flex-start;
       justify-content: center;
       &:first-child {
-        padding-left: 10rem;
+        padding-left: 3vw;
+      }
+      &.is-carousel {
+        @include breakpoint(sm) {
+          padding: 2rem;
+          max-height: 60vh;
+        }
       }
     }
   }

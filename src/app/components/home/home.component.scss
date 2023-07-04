@@ -1,3 +1,5 @@
+@use 'src/assets/scss/mixins' as *;
+
 h1 {
   margin-bottom: 3rem;
 }
@@ -6,4 +8,25 @@ h1 {
   width: 100%;
   display: flex;
   justify-content: center;
+  @include breakpoint(sm) {
+    height: 100%;
+  }
+
+  &__container {
+    @include breakpoint(sm) {
+      height: 100%;
+    }
+  }
+
+  &__item {
+    @include breakpoint(sm) {
+      height: 100%;
+    }
+    .thumbnail {
+      @include breakpoint(sm) {
+        height: 100%;
+      }
+    }
+  }
+
 }

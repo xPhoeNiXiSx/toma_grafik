@@ -5,6 +5,10 @@
   justify-content: center;
   gap: 8rem;
 
+  @include breakpoint(md) {
+    display: none;
+  }
+
   .btn {
     height: 6rem;
     font-size: 2.4rem;

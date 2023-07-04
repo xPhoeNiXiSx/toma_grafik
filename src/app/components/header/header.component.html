@@ -3,7 +3,7 @@
     <img src="assets/img/logo.svg" height="40" alt="">
   </a>
   <div class="header-menu">
-    <button class="btn" (click)="toggleMenu()">Menu</button>
+    <button [class.is-open]="isOpen" class="btn btn-menu" (click)="toggleMenu()">Menu</button>
   </div>
 </header>
 <app-menu [isOpen]="isOpen"></app-menu>
