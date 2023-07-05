@@ -1,3 +1,6 @@
+@use 'src/assets/scss/variables' as *;
+@use 'src/assets/scss/mixins' as *;
+
 .collection {
   &-item {
     display: flex;
@@ -6,7 +9,9 @@
     padding-bottom: 3rem;
     margin-bottom: 4rem;
     border-bottom: 1px solid var(--color-white);
-    min-height: 29rem;
+    @include breakpoint-min(sm) {
+      min-height: 29rem;
+    }
   }
   &-title {
     flex: 0 0 15rem;
@@ -27,6 +32,9 @@
     align-items: flex-end;
     gap: 4rem;
     flex: 1;
+    @include breakpoint(sm) {
+      display: none;
+    }
     app-collection-detail {
       max-width: 18rem;
       transform: scale(1);
