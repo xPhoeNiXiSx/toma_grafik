@@ -6,6 +6,7 @@ import { CollectionDetailComponent } from './collection-detail/collection-detail
 
 import { ProjectService } from 'src/app/services/project/project.service';
 import { CollectionPageComponent } from './collection-page/collection-page.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { CollectionPageComponent } from './collection-page/collection-page.compo
     CollectionPageComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   providers: [
     ProjectService

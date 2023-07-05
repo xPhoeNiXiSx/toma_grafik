@@ -50,7 +50,7 @@ import { MenuComponent } from './components/menu/menu.component';
     RouterModule
   ],
   providers: [
-    ProjectService
+    ProjectService,
   ],
   bootstrap: [AppComponent]
 })

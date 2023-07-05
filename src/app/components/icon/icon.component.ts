@@ -1,20 +1,23 @@
-import { Component, HostBinding, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef, Input, OnInit } from '@angular/core';
+import { myIcons } from './icon';
 
 @Component({
   selector: 'app-icon',
   templateUrl: './icon.component.html',
-  styleUrls: ['./icon.component.scss']
+  styleUrls: ['./icon.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class IconComponent implements OnInit {
-  @HostBinding('style.-webkit-mask-image')
-  private _path!: string;
-  @Input() public set path(filePath: string) {
-  this._path = `url("${filePath}")`;
-  }
+  @Input() name: string;
 
-  constructor() { }
+  constructor(
+    private element: ElementRef
+  ) {}
 
   ngOnInit(): void {
+    this.element.nativeElement.innetHTML = myIcons[this.name] || null;
+    console.log(this.element.nativeElement.innetHTML);
+    console.log(this.name)
   }
 
 }

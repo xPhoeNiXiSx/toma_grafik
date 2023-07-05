@@ -1,4 +1,5 @@
 @use 'src/assets/scss/variables' as *;
+@use 'src/assets/scss/mixins' as *;
 @use 'src/assets/scss/animate' as *;
 
 .project {
@@ -39,6 +40,9 @@
     position: relative;
     z-index: 2;
     transition: opacity 0s .3s ease-in;
+    @include breakpoint(sm) {
+      display: none;
+    }
   }
   &__title {
     font-weight: normal;
@@ -113,15 +117,22 @@
 }
 
 .project-carousel {
+  --decalage: 15vw;
   width: 100vw;
   height: calc(100vh - var(--h-header));
   overflow: hidden;
   display: flex;
   align-items: center;
+  @include breakpoint(sm) {
+    --decalage: 5vw;
+  }
   &__wrap {
     display: flex;
     margin-left: 15vw;
     transition: all .5s ease-in;
+    @include breakpoint(sm) {
+      margin-left: 5vw;
+    }
   }
   &__item {
     flex-grow: 0;
@@ -131,15 +142,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    // overflow: hidden;
     opacity: 0.3;
     transition: all .5s ease-in;
+    @include breakpoint(sm) {
+      flex-basis: 5vw;
+      width: 5vw;
+    }
 
     // Active
     &.is-active {
       opacity: 1;
       flex-basis: 70vw;
       width: 70vw;
+      @include breakpoint(sm) {
+        flex-basis: 90vw;
+        width: 90vw;
+      }
       .project__thumbnail {
         transform: scale(1);
         transition: all .5s ease-in;
