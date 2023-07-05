@@ -12,8 +12,10 @@
     transition: all .5s ease-in;
     transform: scale(0.45) translateX(-40%);
     position: relative;
-    flex: 0 0 480px;
     z-index: 10;
+    @include breakpoint-min(sm) {
+      flex: 0 0 480px;
+    }
     > img {
       position: relative;
       z-index: 1;
@@ -132,6 +134,7 @@
     transition: all .5s ease-in;
     @include breakpoint(sm) {
       margin-left: 5vw;
+      margin-bottom: 4rem;
     }
   }
   &__item {

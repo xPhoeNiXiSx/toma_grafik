@@ -1,3 +1,6 @@
+@use 'src/assets/scss/variables' as *;
+@use 'src/assets/scss/mixins' as *;
+
 .project {
   position: relative;
   h2 {
