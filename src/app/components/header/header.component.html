@@ -2,8 +2,10 @@
   <a title="" [routerLink]="'/'" class="header-logo" data-aos="fade-right" data-aos-delay="500">
     <img src="assets/img/logo.svg" height="40" alt="">
   </a>
-  <div class="header-menu">
-    <button [class.is-open]="isOpen" class="btn btn-menu" data-aos="fade-left" data-aos-delay="500" (click)="toggleMenu()">Menu</button>
+  <div class="header-menu" data-aos="fade-left" data-aos-delay="500">
+    <button [class.is-open]="isOpen" class="btn btn-menu" (click)="toggleMenu()">
+      <span>Menu</span>
+    </button>
   </div>
 </header>
 <app-menu [isOpen]="isOpen"></app-menu>
