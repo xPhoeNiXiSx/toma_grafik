@@ -1,8 +1,16 @@
 .btn {
   &.btn-menu {
     position: relative;
-    width: 5rem;
-    height: 4rem;
+    width: 7rem;
+    height: 6rem;
+    transition: transform .3s ease-in-out;
+    transform-origin: center center;
+    transform: scale(1);
+
+    &:hover, &:focus {
+      transform: scale(1.2);
+    }
+
     span {
       overflow: hidden;
       width: 100%;
@@ -10,6 +18,7 @@
       display: block;
       transition: all .3s .3s ease-in-out;
       text-align: center;
+      font-size: 2rem;
     }
     &:before,
     &:after {
@@ -45,7 +54,7 @@
         width: 0;
       }
       &:before, &:after {
-        height: 2.4rem;
+        height: 3.2rem;
       }
       &:before {
         left: 50%;
