@@ -13,6 +13,7 @@ body {
   background: var(--color-bg) url(../img/bg.jpg) center center no-repeat;
   background-size: cover;
   overflow: hidden;
+  min-height: 100vh;
 }
 
 h1, h2, h3, h4, h5, h6 {
