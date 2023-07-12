@@ -11,7 +11,7 @@ import { Observable } from 'rxjs';
 })
 export class HomeComponent implements OnInit {
   sketchForm : FormGroup;
-  
+
   constructor(
     private store: AngularFirestore,
     private formBuilder: FormBuilder
@@ -21,14 +21,14 @@ export class HomeComponent implements OnInit {
     // })
     // .then(() => { console.log("Document successfully written!"); })
     // .catch((error) => { console.error("Error writing document: ", error); });
-    
+
     console.log(store.collection.length);
   }
-    
+
   ngOnInit(): void {
-    this.sketchForm =  this.formBuilder.group({
-      name: ['', [Validators.required]],
-    })
+    // this.sketchForm =  this.formBuilder.group({
+    //   name: ['', [Validators.required]],
+    // })
   }
 
   submitSketch(value: any): void {

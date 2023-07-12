@@ -11,4 +11,4 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 ## Prod and Deploy
 
 > `ng build --configuration production`
-> `firebase deploy`
+> `firebase deploy` or `firebase deploy --only hosting:toma_grafik`
