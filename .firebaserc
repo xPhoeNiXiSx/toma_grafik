@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "toma-grafik"
+  },
+  "targets": {
+    "toma-grafik": {
+      "hosting": {
+        "toma_grafik": [
+          "toma-grafik"
+        ]
+      }
+    }
   }
 }

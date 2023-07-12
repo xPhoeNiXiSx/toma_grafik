@@ -1,14 +1,9 @@
 <section id="section-one" class="page is-one">
-  <!-- <div class="block first"></div>
-  <div class="block second"></div>
-  <div class="block third"></div>
-  <div class="block fourth"></div> -->
   <div class="page__section">
     <p data-aos="fade-right" data-aos-delay="400" class="new">Nouveau</p>
     <h1 data-aos="fade-right" data-aos-delay="600">Nantes sketches collection</h1>
     <a data-aos="fade-right" data-aos-delay="800" [routerLink]="'/collections/japan'" class="btn btn-primary is-arrow-right">
       Voir la collection
-      <!-- <app-icon name="arrow-right"></app-icon> -->
     </a>
   </div>
   <div class="page__section is-carousel" data-aos="fade-left" data-aos-delay="800">
@@ -34,3 +29,17 @@
     </a>
   </div> -->
 </section>
+
+<!-- <h5 class="card-title mb-4">New Sandwich</h5>
+<form [formGroup]="sketchForm" (submit)="submitSketch(sketchForm.value)">
+  <div>
+    <label for="name">Name</label>
+    <input
+      id="name"
+      name="name"
+      type="text"
+      class="form-control"
+      formControlName="name"/>
+  </div>
+  <button class="btn btn-primary" type="submit" [disabled]="sketchForm.invalid">Ajouter un dessin</button>
+</form> -->

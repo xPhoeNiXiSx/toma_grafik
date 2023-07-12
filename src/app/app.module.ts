@@ -2,9 +2,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import { ProjectService } from './services/project/project.service';
 import { ProjectListComponent } from './components/projects/project-list/project-list.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -22,6 +23,13 @@ import { HomeCollectionsComponent } from './components/home/home-collections/hom
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { HomeOneComponent } from './components/home/home-one/home-one.component';
 import { MenuComponent } from './components/menu/menu.component';
+
+//Firebase & Firestore
+import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireModule } from '@angular/fire/compat';
+
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -42,12 +50,16 @@ import { MenuComponent } from './components/menu/menu.component';
     MenuComponent,
   ],
   imports: [
+    FormsModule,
+    ReactiveFormsModule,
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
     CollectionsModule,
-    RouterModule
+    RouterModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule
   ],
   providers: [
     ProjectService,
