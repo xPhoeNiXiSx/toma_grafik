@@ -12,8 +12,7 @@ body {
   color: var(--color-white);
   background: var(--color-bg) url(../img/bg.jpg) center center no-repeat;
   background-size: cover;
-  overflow: hidden;
-  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -53,6 +52,7 @@ img.img-responsive {
 @import 'buttons';
 @import 'buttons-arrows';
 @import 'button-menu';
+@import 'form';
 @import 'icon';
 @import 'page-header';
 @import 'page-menu';
