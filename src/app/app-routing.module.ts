@@ -25,7 +25,7 @@ const routes: Routes = [
   { path: 'work', component: WorkComponent, data: { animation: 'WorkPage' }},
   { path: 'about', component: AboutComponent, data: { animation: 'AboutPage' }},
   { path: 'process', component: ProcessComponent, data: { animation: 'ProcessPage' }},
-  { path: 'contact', component: ContactComponent, data: { animation: 'ContactPage' }},
+  // { path: 'contact', component: ContactComponent, data: { animation: 'ContactPage' }},
   { path: '**', pathMatch: 'full', component: NotfoundComponent },
 ];
 

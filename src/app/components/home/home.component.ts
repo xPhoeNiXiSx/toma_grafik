@@ -11,6 +11,8 @@ import { Observable } from 'rxjs';
 })
 export class HomeComponent implements OnInit {
   sketchForm : FormGroup;
+  selectedIndex = 0;
+  nbProjects = 3;
 
   constructor(
     private store: AngularFirestore,
@@ -34,6 +36,22 @@ export class HomeComponent implements OnInit {
   submitSketch(value: any): void {
     if(value) {
       this.store.collection("sketch").add(value);
+    }
+  }
+
+  public prevProject(): void {
+    if(this.selectedIndex === 0) {
+      this.selectedIndex = this.nbProjects - 1;
+    } else {
+      this.selectedIndex --;
+    }
+  }
+
+  public nextProject(): void {
+    if(this.selectedIndex === this.nbProjects - 1) {
+      this.selectedIndex = 0;
+    } else {
+      this.selectedIndex ++;
     }
   }
 
