@@ -19,7 +19,7 @@
         <p><span>Collection</span>{{ project.collection }}</p>
         <p><span>Creation date</span>{{ project.date | date }}</p>
       </div>
-      <div class="project__photos">
+      <div class="project__photos" *ngIf="project.photos.length">
         <button
           class="btn"
           *ngFor="let photo of project.photos; let j=index"

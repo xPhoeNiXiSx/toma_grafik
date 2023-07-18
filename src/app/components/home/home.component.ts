@@ -11,8 +11,21 @@ import { Observable } from 'rxjs';
 })
 export class HomeComponent implements OnInit {
   sketchForm : FormGroup;
-  selectedIndex = 0;
-  nbProjects = 3;
+  selectedIndex = 1;
+  public homeProjects:any = [
+    {
+      name: 'Japan Store 1',
+      url: 'assets/img/one/1.jpg',
+    },
+    {
+      name: 'Japan Store 2',
+      url: 'assets/img/one/2.jpg',
+    },
+    {
+      name: 'Japan Store 3',
+      url: 'assets/img/one/3.jpg',
+    }
+  ];
 
   constructor(
     private store: AngularFirestore,
@@ -40,19 +53,23 @@ export class HomeComponent implements OnInit {
   }
 
   public prevProject(): void {
-    if(this.selectedIndex === 0) {
-      this.selectedIndex = this.nbProjects - 1;
+    if(this.selectedIndex === 1) {
+      this.selectedIndex = this.homeProjects.length;
     } else {
       this.selectedIndex --;
     }
   }
 
   public nextProject(): void {
-    if(this.selectedIndex === this.nbProjects - 1) {
-      this.selectedIndex = 0;
+    if(this.selectedIndex === this.homeProjects.length) {
+      this.selectedIndex = 1;
     } else {
       this.selectedIndex ++;
     }
+  }
+
+  public goToProject(i: number): void {
+    this.selectedIndex = i;
   }
 
 }

@@ -8,6 +8,7 @@
   width: 100%;
   padding: 1rem;
   overflow: hidden;
+
   &__thumbnail {
     transition: all .5s ease-in;
     transform: scale(0.45) translateX(-40%);
@@ -32,6 +33,7 @@
       z-index: 0;
     }
   }
+
   &__content {
     flex-direction: column;
     gap: 3rem;
@@ -125,15 +127,17 @@
   overflow: hidden;
   display: flex;
   align-items: center;
+  @include breakpoint(md) {
+    --decalage: 10vw;
+  }
   @include breakpoint(sm) {
     --decalage: 5vw;
   }
   &__wrap {
     display: flex;
-    margin-left: 15vw;
+    margin-left: var(--decalage);
     transition: all .5s ease-in;
     @include breakpoint(sm) {
-      margin-left: 5vw;
       margin-bottom: 4rem;
     }
   }
@@ -155,12 +159,12 @@
     // Active
     &.is-active {
       opacity: 1;
-      flex-basis: 70vw;
-      width: 70vw;
-      @include breakpoint(sm) {
-        flex-basis: 90vw;
-        width: 90vw;
-      }
+      flex-basis: calc(100vw - calc(2 * var(--decalage)));
+      width: calc(100vw - calc(2 * var(--decalage)));
+      // @include breakpoint(sm) {
+      //   flex-basis: 90vw;
+      //   width: 90vw;
+      // }
       .project__thumbnail {
         transform: scale(1);
         transition: all .5s ease-in;

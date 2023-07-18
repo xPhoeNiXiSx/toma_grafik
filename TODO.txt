@@ -12,7 +12,7 @@
 -> Zoom sur photo ?
 -> Loupe de détail/zoom au hover ?
 -> revoir modele de donnée d'un dessin
-
+-> Cursor : https://blog.logrocket.com/creating-custom-mouse-cursor-css/
 -> faire la DB avec formulaire d'ajouter
 
 -> ajouter un effet / slider au click sur le dessin pour switch entre Noire/blanc et couleur

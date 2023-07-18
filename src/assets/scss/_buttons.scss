@@ -6,8 +6,9 @@
   background: transparent;
   color: var(--color-white);
   font-family: var(--ff);
+
   &:hover, &:focus {
-    cursor: pointer;
+    cursor: url(../img/cursor-hover.svg) 0 0, auto;
   }
 
   &.btn-primary {
