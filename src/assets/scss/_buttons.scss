@@ -8,7 +8,7 @@
   font-family: var(--ff);
 
   &:hover, &:focus {
-    cursor: url(../img/cursor-hover.svg) 0 0, auto;
+    cursor: url(../img/cursor-hover.svg) 8 8, auto;
   }
 
   &.btn-primary {
@@ -90,6 +90,43 @@
     img {
       width: 6rem;
       height: 6rem;
+    }
+  }
+
+  &.btn-etsy {
+    --alpha: 0.6;
+    background: rgba(var(--color-bg));
+    box-shadow: 0 0 1rem 0 rgba(var(--color-etsy-rgb),var(--alpha));
+    border: 1px solid var(--color-etsy);
+    height: 4rem;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    gap: .4rem;
+    font-weight: 600;
+    transform: translateY(0);
+    transition: all .5s ease-in-out;
+    position: relative;
+    span {
+      color: var(--color-etsy);
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 2rem;
+      background: var(--color-etsy);
+      transition: all .5s ease-in-out;
+      opacity: 0;
+    }
+    &:hover, &:focus {
+      --alpha: 0.8;
+      transform: translateY(-.3rem);
+      box-shadow: 0 .4rem 1rem 0 rgba(var(--color-etsy-rgb),var(--alpha));
+      &::before {
+        opacity: 0.15;
+      }
     }
   }
 
