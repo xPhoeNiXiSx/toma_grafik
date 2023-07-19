@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import "./scroll";
 
 @Component({
   selector: 'app-about',

@@ -1,0 +1,47 @@
+@use 'src/assets/scss/variables' as *;
+@use 'src/assets/scss/mixins' as *;
+
+.cursor-dot {
+  --dotSize: .6rem;
+  margin-top: calc(var(--dotSize) / -2);
+  margin-left: calc(var(--dotSize) / -2);
+  height: var(--dotSize);
+  width: var(--dotSize);
+  border-radius: var(--dotSize);
+  position: fixed;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  background: #FFF;
+  transition: transform .05s ease-in-out, top .05s, left .05s;
+  z-index: 600;
+  mix-blend-mode: difference;
+  @include breakpoint(sm) {
+    display: none;
+  }
+}
+
+.cursor {
+  --cursorSize: 4rem;
+  border: 1px solid rgb(#FFF,1);
+  margin-top: calc(var(--cursorSize) / -2);
+  margin-left: calc(var(--cursorSize) / -2);
+  height: var(--cursorSize);
+  width: var(--cursorSize);
+  display: block;
+  border-radius: var(--cursorSize);
+  position: fixed;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  transition: transform .05s, background .3s, top .05s, left .05s;
+  cursor: none;
+  z-index: 600;
+  mix-blend-mode: difference;
+  &.hover {
+    background: rgba(#FFF,0.6);
+  }
+  @include breakpoint(sm) {
+    display: none;
+  }
+}

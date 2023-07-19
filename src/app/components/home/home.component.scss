@@ -17,7 +17,7 @@ h1 {
   &__container {
     display: flex;
     justify-content: center;
-    min-height: calc(100dvh - var(--h-header));
+    min-height: 80vh;
     width: 100%;
     padding-right: 4rem;
     position: relative;
@@ -73,9 +73,9 @@ h1 {
 
   &__nav {
     position: absolute;
-    bottom: 3rem;
+    bottom: -3rem;
     left: 0;
-    right: 0;
+    right: 4rem;
     display: flex;
     justify-content: space-between;
     align-items: center;

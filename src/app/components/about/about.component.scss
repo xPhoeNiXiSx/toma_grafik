@@ -1,7 +1,3 @@
-.section-first {
-  height: calc(100vh - var(--h-header));
-}
-
-.section-page {
+section, header, footer {
   height: 100vh;
 }
