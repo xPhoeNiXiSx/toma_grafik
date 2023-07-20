@@ -1,24 +1,26 @@
 <nav class="header__nav" [class.is-open]="isOpen">
-  <ul>
-    <li>
-      <a [routerLink]="'/'" routerLinkActive="is-active">
-        <span>Accueil</span>
-      </a>
-    </li>
-    <li>
-      <a [routerLink]="'/collections'" routerLinkActive="is-active">
-        <span>Collections</span>
-      </a>
-    </li>
-    <!-- <li>
-      <a [routerLink]="'/about'" routerLinkActive="is-active">
-        <span>About</span>
-      </a>
-    </li> -->
-    <!-- <li>
-      <a [routerLink]="'/contact'" routerLinkActive="is-active">
-        <span>Contact</span>
-      </a>
-    </li> -->
-  </ul>
+  <div class="container">
+    <ul>
+      <li>
+        <a [routerLink]="'/'" routerLinkActive="is-active">
+          <span>Accueil</span>
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="'/collections'" routerLinkActive="is-active">
+          <span>Collections</span>
+        </a>
+      </li>
+      <!-- <li>
+        <a [routerLink]="'/about'" routerLinkActive="is-active">
+          <span>About</span>
+        </a>
+      </li> -->
+      <!-- <li>
+        <a [routerLink]="'/contact'" routerLinkActive="is-active">
+          <span>Contact</span>
+        </a>
+      </li> -->
+    </ul>
+  </div>
 </nav>

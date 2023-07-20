@@ -2,8 +2,10 @@
 @use 'mixins' as *;
 @use 'fonts' as *;
 
-* {
-  cursor: none;
+@include breakpoint-min(sm) {
+  * {
+    cursor: none;
+  }
 }
 
 html {
@@ -53,6 +55,7 @@ img.img-responsive {
 @import 'scroll';
 
 @import 'header';
+@import 'backgrounds';
 @import 'layout';
 @import 'buttons';
 @import 'buttons-arrows';

@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, ElementRef, HostListener, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { fadeIn, fadeInOutPage, fadeOut } from './app.animations';
-import { ChildrenOutletContexts, RouterOutlet } from '@angular/router';
+import { ChildrenOutletContexts, NavigationStart, Router, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -16,9 +16,20 @@ export class AppComponent implements OnInit, AfterViewInit {
   public cursorDot?: ElementRef;
 
   constructor(
-    private contexts: ChildrenOutletContexts,
     private renderer: Renderer2,
-  ) {}
+    private router: Router
+  ) {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationStart) {
+        console.log(event.url);
+        if(event.url.includes('collections')) {
+          document.body.classList.add("is-collections");
+        } else {
+          document.body.classList.remove("is-collections");
+        }
+      }
+    });
+  }
 
   @HostListener('mousemove', ['$event'])
   moveCursor(event: MouseEvent) {
@@ -33,7 +44,7 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   @HostListener('mouseenter')
   onMouseEnter() {
-    console.log('test');
+    // console.log('test');
     // if (this.cursor) {
     //   this.cursor.nativeElement.classList('hover');
     // }

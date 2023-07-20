@@ -5,8 +5,9 @@
   <div
     class="project-carousel__wrap"
     [style.width]="'calc(' + projects.length + '*100vw)'"
-    [style.transform]="'translateX(calc(-' + selectedIndex + ' * var(--decalage)))'"
-  >
+    [style.transform]="'translateX(calc(-' + selectedIndex + ' * 100vw ))'"
+    >
+    <!-- [style.transform]="'translateX(calc(-' + selectedIndex + ' * var(--decalage)))'" -->
     <ng-container *ngFor="let project of projects; let i=index">
       <app-project-item [project]="project" [isActive]="selectedIndex === i "></app-project-item>
     </ng-container>
