@@ -1,14 +1,14 @@
-<div class="collection-item">
-  <div class="collection-title" data-aos="fade-up" data-aos-offset="100" >
+<div class="collection-item" data-aos="fade-up">
+  <div class="collection-title" >
     <span class="number">{{ collectionNumber }}</span>
     <h2>{{ collectionSlug }}</h2>
   </div>
-  <div class="collection-content" data-aos="fade-up" data-aos-offset="100" >
+  <div class="collection-content">
     <ng-container *ngFor="let project of collectionProjects; let i=index">
       <app-collection-detail [project]="project"></app-collection-detail>
     </ng-container>
   </div>
-  <div class="collection-action" data-aos="fade-up" data-aos-offset="100" >
+  <div class="collection-action">
     <a [routerLink]="'/collections/'+collectionSlug" class="btn btn-primary">Voir plus</a>
   </div>
 </div>

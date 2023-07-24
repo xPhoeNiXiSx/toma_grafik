@@ -9,7 +9,7 @@ export class CollectionPageComponent implements OnInit {
   public filter = "";
   public collections = [
     {
-      name :'houses',
+      name :'cocktail',
       id : '01',
     },
     {
@@ -17,21 +17,13 @@ export class CollectionPageComponent implements OnInit {
       id : '02',
     },
     {
-      name :'projects',
+      name :'houses',
       id : '03',
     },
-    // {
-    //     name :'nantes',
-    //     id: '02'
-    // },
-    // {
-    //     name :'london',
-    //     id: '03'
-    // },
-    // {
-    //     name :'toulouse',
-    //     id: '04'
-    // }
+    {
+      name :'projects',
+      id : '04',
+    }
   ];
 
   constructor() { }
