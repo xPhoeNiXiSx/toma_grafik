@@ -13,7 +13,7 @@
   top: 0;
   left: 0;
   background: #FFF;
-  transition: transform .05s ease-in-out, top .05s, left .05s;
+  // transition: transform .05s ease-in-out, top .05s, left .05s;
   z-index: 600;
   mix-blend-mode: difference;
   @include breakpoint(sm) {
@@ -23,23 +23,35 @@
 
 .cursor {
   --cursorSize: 4rem;
-  border: 1px solid rgb(#FFF,1);
   margin-top: calc(var(--cursorSize) / -2);
   margin-left: calc(var(--cursorSize) / -2);
   height: var(--cursorSize);
   width: var(--cursorSize);
   display: block;
-  border-radius: var(--cursorSize);
   position: fixed;
   pointer-events: none;
   top: 0;
   left: 0;
-  transition: transform .05s, background .3s, top .05s, left .05s;
+  transition: transform .05s ease-in-out, background .3s, top .05s, left .05s;
   cursor: none;
   z-index: 600;
   mix-blend-mode: difference;
-  &.hover {
-    background: rgba(#FFF,0.6);
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 1px solid rgb(#FFFFFF,1);
+    background: transparent;
+    border-radius: var(--cursorSize);
+    transition: all .5s ease-in-out;
+    transform: scale(1);
+    transform-origin: center;
+  }
+  &.is-hovering {
+    &::before {
+      transform: scale(0.3);
+      background: var(--color-white);
+    }
   }
   @include breakpoint(sm) {
     display: none;

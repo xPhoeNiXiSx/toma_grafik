@@ -42,12 +42,17 @@ export class AppComponent implements OnInit, AfterViewInit {
     }
   }
 
-  @HostListener('mouseenter')
-  onMouseEnter() {
-    // console.log('test');
-    // if (this.cursor) {
-    //   this.cursor.nativeElement.classList('hover');
-    // }
+  @HostListener('mouseover',  ['$event'] )
+  onMouseEnter(event: MouseEvent) {
+    if(event.target && this.cursor) {
+      let targetElement = event.target as Element;
+      // console.log(targetElement.tagName);
+      if(targetElement.tagName === 'A' || targetElement.tagName === 'BUTTON') {
+        this.cursor.nativeElement.classList.add('is-hovering');
+      } else {
+        this.cursor.nativeElement.classList.remove('is-hovering');
+      }
+    }
   }
 
   ngOnInit(): void {}

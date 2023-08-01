@@ -20,10 +20,10 @@ export class CollectionPageComponent implements OnInit {
       name :'houses',
       id : '03',
     },
-    {
-      name :'projects',
-      id : '04',
-    }
+    // {
+    //   name :'projects',
+    //   id : '04',
+    // }
   ];
 
   constructor() { }

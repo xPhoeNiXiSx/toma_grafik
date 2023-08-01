@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Project } from 'src/app/entity/project.class';
 import { ProjectService } from 'src/app/services/project/project.service';
 
@@ -14,16 +14,23 @@ export class ProjectListComponent implements OnInit {
   selectedIndex = 0;
 
   constructor(
-    private route: ActivatedRoute,
+    private activatedRoute: ActivatedRoute,
+    private route: Router,
     private projectService: ProjectService,
-  ) {}
+  ) {
+
+  }
 
   ngOnInit(): void {
-    const routeSlug = this.route.snapshot.paramMap.get('slug');
+    const routeSlug = this.activatedRoute.snapshot.paramMap.get('slug');
     if(routeSlug) {
       this.collectionSlug = routeSlug;
       this.getProjects();
     }
+    this.activatedRoute.queryParamMap.subscribe(params => {
+      let paramId = Number(params.get('id'));
+      this.selectedIndex = paramId - 1;
+    })
   }
 
   getProjects(): void {
@@ -36,6 +43,7 @@ export class ProjectListComponent implements OnInit {
     } else {
       this.selectedIndex --;
     }
+    // this.route.navigate([], { queryParams: {'id': this.selectedIndex}})
   }
 
   public nextProject(): void {
@@ -44,6 +52,7 @@ export class ProjectListComponent implements OnInit {
     } else {
       this.selectedIndex ++;
     }
+    // this.route.navigate([], { queryParams: {'id': this.selectedIndex}})
   }
 
   public goToProject(index: number): void {

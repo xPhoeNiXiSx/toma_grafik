@@ -1,6 +1,9 @@
 <div class="project">
-  <div class="project__thumbnail">
+  <div
+    class="project__thumbnail"
+    [routerLink]="'/collections/' + project.collection"
+    [queryParams]="{id: project.id}"
+  >
     <img [src]="project.thumbnail.url" alt="">
   </div>
-  <!-- <h2>{{ project.title }}</h2> -->
 </div>
