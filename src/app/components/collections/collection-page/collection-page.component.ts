@@ -17,7 +17,7 @@ export class CollectionPageComponent implements OnInit {
       id : '02',
     },
     {
-      name :'houses',
+      name :'nantes',
       id : '03',
     },
     // {

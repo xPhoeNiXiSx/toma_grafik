@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "title": "Tour LU",
+    "title": "La Grue Jaune",
     "photos": [],
     "black": true,
     "sizeWidth": 1000,
@@ -10,24 +10,8 @@
     "date": "2023-07-01",
     "reference": "",
     "thumbnail": {
-      "url": "assets/img/projects/project1.jpg",
-      "title": "Tour LU",
-      "description": ""
-    }
-  },
-  {
-    "id": 2,
-    "title": "Tour LU",
-    "photos": [],
-    "black": true,
-    "sizeWidth": 1000,
-    "sizeHeight": 800,
-    "collection": "nantes",
-    "date": "2023-07-01",
-    "reference": "",
-    "thumbnail": {
-      "url": "assets/img/projects/project1.jpg",
-      "title": "Tour LU",
+      "url": "assets/img/projects/nantes/1.jpg",
+      "title": "Nantes - La grue Jaune",
       "description": ""
     }
   }
