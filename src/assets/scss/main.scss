@@ -46,9 +46,12 @@ a {
   }
 }
 
-img.img-responsive {
-  max-width: 100%;
-  max-height: 100%;
+img {
+  content-visibility: auto;
+  &.img-responsive {
+    max-width: 100%;
+    max-height: 100%;
+}
 }
 
 @import 'reset';
