@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import { CollectionsComponent } from './components/collections/collections.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { CollectionPageComponent } from './components/collections/collection-page/collection-page.component';
+import { LandingComponent } from './components/landing/landing.component';
 
 const routes: Routes = [
   {
@@ -19,6 +20,7 @@ const routes: Routes = [
     redirectTo: 'home'
   },
   { path: 'home', component: HomeComponent, data: { animation: 'HomePage' }},
+  { path: 'landing', component: LandingComponent},
   { path: 'collections', component: CollectionPageComponent, data: { animation: 'CollectionsPage' }},
   { path: 'collections/:slug', component: ProjectListComponent, data: { animation: 'CollectionDetailPage' }},
   { path: 'projects', component: ProjectListComponent, data: { animation: 'ProjectPage' }},

@@ -30,6 +30,7 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireModule } from '@angular/fire/compat';
 
 import { environment } from 'src/environments/environment';
+import { LandingComponent } from './components/landing/landing.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { environment } from 'src/environments/environment';
     HomeCollectionsComponent,
     NotfoundComponent,
     MenuComponent,
+    LandingComponent,
   ],
   imports: [
     FormsModule,

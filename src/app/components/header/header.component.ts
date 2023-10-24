@@ -9,6 +9,7 @@ import { filter } from 'rxjs';
 })
 export class HeaderComponent implements OnInit {
   public isOpen = false;
+  public isLightActive = false;
 
   constructor(
     private router: Router,
