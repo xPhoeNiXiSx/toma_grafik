@@ -1,0 +1,31 @@
+.section {
+
+  &__content {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 10rem 0;
+  }
+
+  // CATEGORY
+  &.is-category {
+    position: relative;
+    overflow: hidden;
+    .category-list {
+      display: flex;
+      flex-direction: column;
+      gap: 11rem;
+      width: 100%;
+    }
+    .category-link {
+      font-size: 15rem;
+      font-family: 'SquadaOne';
+      display: block;
+      &:hover, &:focus {
+        background: var(--color-white);
+        cursor: url('/assets/img/cursor-category.svg'), auto;
+      }
+    }
+  }
+}
+

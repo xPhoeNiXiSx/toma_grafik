@@ -33,6 +33,9 @@ import { environment } from 'src/environments/environment';
 import { LandingComponent } from './components/landing/landing.component';
 import { HeroComponent } from './components/landing/hero/hero.component';
 import { GridComponent } from './components/landing/grid/grid.component';
+import { CategoryComponent } from './components/landing/category/category.component';
+import { SlideshowComponent } from './components/landing/slideshow/slideshow.component';
+import { FooterComponent } from './components/landing/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +57,9 @@ import { GridComponent } from './components/landing/grid/grid.component';
     LandingComponent,
     HeroComponent,
     GridComponent,
+    CategoryComponent,
+    SlideshowComponent,
+    FooterComponent,
   ],
   imports: [
     FormsModule,

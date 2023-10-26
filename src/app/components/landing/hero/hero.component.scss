@@ -11,6 +11,22 @@
   width: 100%;
 }
 
+.lines {
+  position: fixed;
+  inset: 0 25rem;
+  pointer-events: none;
+  z-index: -1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.line-item {
+  width: 1px;
+  height: 100vh;
+  background: var(--color-white);
+  opacity: 0.15;
+}
+
 h1 {
   font-family: 'SquadaOne';
   color: var(--color-white);
