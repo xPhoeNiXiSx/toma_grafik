@@ -1,6 +1,12 @@
 @use 'src/assets/scss/variables' as *;
 @use 'src/assets/scss/mixins' as *;
 
+@include breakpoint-min(sm) {
+  * {
+    cursor: none;
+  }
+}
+
 .cursor-dot {
   --dotSize: .6rem;
   margin-top: calc(var(--dotSize) / -2);

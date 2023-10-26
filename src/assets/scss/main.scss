@@ -2,12 +2,6 @@
 @use 'mixins' as *;
 @use 'fonts' as *;
 
-@include breakpoint-min(sm) {
-  * {
-    cursor: none;
-  }
-}
-
 html {
   font-size: 62.5%;
 }

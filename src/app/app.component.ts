@@ -31,29 +31,31 @@ export class AppComponent implements OnInit, AfterViewInit {
     });
   }
 
-  @HostListener('mousemove', ['$event'])
-  moveCursor(event: MouseEvent) {
-    let x = event.clientX;
-    let y = event.clientY;
-    // console.log(x, y);
-    if (this.cursor && this.cursorDot) {
-      this.renderer.setStyle(this.cursor.nativeElement, 'transform', 'translate3d(' + x + 'px,' + y +'px, 0)');
-      this.renderer.setStyle(this.cursorDot.nativeElement, 'transform', 'translate3d(' + x + 'px,' + y +'px, 0)');
-    }
-  }
+  // Cursor custom movement
+  // @HostListener('mousemove', ['$event'])
+  // moveCursor(event: MouseEvent) {
+  //   let x = event.clientX;
+  //   let y = event.clientY;
+  //   // console.log(x, y);
+  //   if (this.cursor && this.cursorDot) {
+  //     this.renderer.setStyle(this.cursor.nativeElement, 'transform', 'translate3d(' + x + 'px,' + y +'px, 0)');
+  //     this.renderer.setStyle(this.cursorDot.nativeElement, 'transform', 'translate3d(' + x + 'px,' + y +'px, 0)');
+  //   }
+  // }
 
-  @HostListener('mouseover',  ['$event'] )
-  onMouseEnter(event: MouseEvent) {
-    if(event.target && this.cursor) {
-      let targetElement = event.target as Element;
-      // console.log(targetElement.tagName);
-      if(targetElement.tagName === 'A' || targetElement.tagName === 'BUTTON') {
-        this.cursor.nativeElement.classList.add('is-hovering');
-      } else {
-        this.cursor.nativeElement.classList.remove('is-hovering');
-      }
-    }
-  }
+  // Cursor custom hover
+  // @HostListener('mouseover',  ['$event'] )
+  // onMouseEnter(event: MouseEvent) {
+  //   if(event.target && this.cursor) {
+  //     let targetElement = event.target as Element;
+  //     // console.log(targetElement.tagName);
+  //     if(targetElement.tagName === 'A' || targetElement.tagName === 'BUTTON') {
+  //       this.cursor.nativeElement.classList.add('is-hovering');
+  //     } else {
+  //       this.cursor.nativeElement.classList.remove('is-hovering');
+  //     }
+  //   }
+  // }
 
   ngOnInit(): void {}
 
