@@ -26,3 +26,17 @@ Mode mobile à optimiser
 Revoir le BG du site: fond animé canva ?
 
 Exemple de site inspiration : https://labs.lusion.co/
+
+
+// VSCODE plugin
+-> auto rename tag
+-> auto close tag
+-> material icon theme
+-> vscode-icons
+-> winter is coming theme
+
+-> Angular essentials
+-> Angular language services
+-> Angular schematics
+-> SCSS Everywhere
+->

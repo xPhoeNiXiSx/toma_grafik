@@ -31,6 +31,8 @@ import { AngularFireModule } from '@angular/fire/compat';
 
 import { environment } from 'src/environments/environment';
 import { LandingComponent } from './components/landing/landing.component';
+import { HeroComponent } from './components/landing/hero/hero.component';
+import { GridComponent } from './components/landing/grid/grid.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +52,8 @@ import { LandingComponent } from './components/landing/landing.component';
     NotfoundComponent,
     MenuComponent,
     LandingComponent,
+    HeroComponent,
+    GridComponent,
   ],
   imports: [
     FormsModule,
