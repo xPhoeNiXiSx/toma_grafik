@@ -5,5 +5,42 @@
     display: flex;
     align-items: center;
     background: var(--color-white);
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.slideshow {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  &__image {
+    position: relative;
+  }
+  &__cover {
+    position: absolute;
+    inset: 0;
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0 0 0 40%;
+      background: var(--color-white);
+      mix-blend-mode: color;
+    }
+  }
+  &__handle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 22rem;
+    &::after {
+      content: '';
+      width: 5px;
+      display: block;
+      background: var(--color-orange);
+      height: 100%;
+    }
   }
 }

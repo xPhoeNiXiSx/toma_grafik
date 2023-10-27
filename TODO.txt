@@ -14,6 +14,7 @@
 -> revoir modele de donnée d'un dessin
 -> Cursor : https://blog.logrocket.com/creating-custom-mouse-cursor-css/
 -> faire la DB avec formulaire d'ajouter
+-> Opti chargement des images
 
 -> ajouter un effet / slider au click sur le dessin pour switch entre Noire/blanc et couleur
 
