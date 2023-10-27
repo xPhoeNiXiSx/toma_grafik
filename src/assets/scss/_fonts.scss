@@ -68,3 +68,11 @@
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: 'BerkshireSwash';
+  src: url('../fonts/BerkshireSwash-Regular.woff2') format('woff2'),
+      url('../fonts/BerkshireSwash-Regular.woff') format('woff');
+  font-style: normal;
+  font-display: swap;
+}

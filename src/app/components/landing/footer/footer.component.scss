@@ -3,6 +3,7 @@
   min-height: 50vh;
   display: flex;
   align-items: stretch;
+  background: var(--color-bg);
   &__content {
     display: flex;
     justify-content: center;

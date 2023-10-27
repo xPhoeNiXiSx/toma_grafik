@@ -2,18 +2,38 @@
   position: fixed;
   z-index: 600;
   inset: 0 0 auto 0;
-  padding: 1.5rem 2vw;
   height: var(--h-header);
   color: var(--color-white);
-  background: var(--color-bg);
+  background: transparent;
+  transition: all .3s ease-in-out;
+  display: flex;
+
   &__content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 120rem;
+    width: 100%;
+    margin: 0 auto;
   }
+
   &-menu {
     display: flex;
     align-items: center;
     gap: 2rem;
+  }
+
+  &-logo  > img {
+    height: 7rem;
+  }
+
+}
+
+.is-scroll .header {
+  --h-header: 6rem;
+  background: var(--color-bg);
+  padding: .5rem 0;
+  &-logo > img{
+    height: 4rem;
   }
 }

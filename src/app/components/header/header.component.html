@@ -1,21 +1,19 @@
 <header class="header">
-  <div class="container">
-    <div class="header__content">
-      <a title="" [routerLink]="'/'" class="header-logo" data-aos="fade-right" data-aos-delay="500">
-        <img src="assets/img/logo.svg" height="70" alt="">
-      </a>
-      <button class="btn btn-toggle" [class.is-active]="isLightActive" (click)="isLightActive = !isLightActive">
-        <span class="btn-toggle__left">B</span>
-        <span class="btn-toggle__right">W</span>
+  <div class="header__content">
+    <a title="" [routerLink]="'/'" class="header-logo" data-aos="fade-right" data-aos-delay="500">
+      <img src="assets/img/logo.svg" alt="">
+    </a>
+    <!-- <button class="btn btn-toggle" [class.is-active]="isLightActive" (click)="isLightActive = !isLightActive">
+      <span class="btn-toggle__left">B</span>
+      <span class="btn-toggle__right">W</span>
+    </button> -->
+    <div class="header-menu" data-aos="fade-left" data-aos-delay="500">
+      <!-- <a href="/" class="btn btn-etsy">
+        My <span>Shop</span>
+      </a> -->
+      <button [class.is-open]="isOpen" class="btn btn-menu" (click)="toggleMenu()">
+        <span>Menu</span>
       </button>
-      <div class="header-menu" data-aos="fade-left" data-aos-delay="500">
-        <!-- <a href="/" class="btn btn-etsy">
-          My <span>Shop</span>
-        </a> -->
-        <button [class.is-open]="isOpen" class="btn btn-menu" (click)="toggleMenu()">
-          <span>Menu</span>
-        </button>
-      </div>
     </div>
   </div>
 </header>

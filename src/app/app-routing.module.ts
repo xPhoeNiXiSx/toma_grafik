@@ -19,8 +19,8 @@ const routes: Routes = [
     pathMatch: 'full' ,
     redirectTo: 'home'
   },
-  { path: 'home', component: HomeComponent, data: { animation: 'HomePage' }},
-  { path: 'landing', component: LandingComponent},
+  { path: 'home', component: LandingComponent, data: { animation: 'HomePage' }},
+  // { path: 'landing', component: LandingComponent},
   { path: 'collections', component: CollectionPageComponent, data: { animation: 'CollectionsPage' }},
   { path: 'collections/:slug', component: ProjectListComponent, data: { animation: 'CollectionDetailPage' }},
   { path: 'projects', component: ProjectListComponent, data: { animation: 'ProjectPage' }},

@@ -1,6 +1,7 @@
-import { AfterViewInit, Component, ElementRef, HostListener, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, Inject, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { fadeIn, fadeInOutPage, fadeOut } from './app.animations';
 import { ChildrenOutletContexts, NavigationStart, Router, RouterOutlet } from '@angular/router';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -14,12 +15,13 @@ export class AppComponent implements OnInit, AfterViewInit {
   public cursor?: ElementRef;
   @ViewChild('cursorDot') //Get element #cursorDot
   public cursorDot?: ElementRef;
-
+  
   constructor(
     private renderer: Renderer2,
-    private router: Router
-  ) {
-    this.router.events.subscribe((event) => {
+    private router: Router,
+    @Inject(DOCUMENT) private document: Document,
+    ) {
+      this.router.events.subscribe((event) => {
       if (event instanceof NavigationStart) {
         console.log(event.url);
         if(event.url.includes('collections')) {
@@ -29,6 +31,19 @@ export class AppComponent implements OnInit, AfterViewInit {
         }
       }
     });
+  }
+  
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll() {
+    // console.debug("Scroll Event", document.body.scrollTop);
+    let viewportHeight = window.innerHeight;
+    console.log("Scroll Event", window.scrollY );
+    if(window.scrollY > viewportHeight) {
+      // console.log('Scroll Ok');
+      this.document.body.classList.add('is-scroll');
+    } else {
+      this.document.body.classList.remove('is-scroll');
+    }
   }
 
   // Cursor custom movement
