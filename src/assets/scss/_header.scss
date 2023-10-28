@@ -19,6 +19,9 @@
     width: 100%;
     margin: 0 auto;
     padding: 0 4rem;
+    @include breakpoint(sm) {
+      padding: 0 1rem;
+    }
   }
 
   &-menu {

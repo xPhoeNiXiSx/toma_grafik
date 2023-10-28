@@ -1,4 +1,5 @@
-// FOOTER
+@use 'src/assets/scss/mixins' as *;
+
 .footer {
   min-height: 30vh;
   display: flex;
