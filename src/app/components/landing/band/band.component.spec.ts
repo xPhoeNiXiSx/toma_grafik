@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CollectionsComponent } from './home-collections.component';
+import { BandComponent } from './band.component';
 
-describe('CollectionsComponent', () => {
-  let component: CollectionsComponent;
-  let fixture: ComponentFixture<CollectionsComponent>;
+describe('BandComponent', () => {
+  let component: BandComponent;
+  let fixture: ComponentFixture<BandComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CollectionsComponent ]
+      declarations: [ BandComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(CollectionsComponent);
+    fixture = TestBed.createComponent(BandComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

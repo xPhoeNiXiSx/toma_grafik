@@ -1,0 +1,11 @@
+h1 {
+  font-family: 'SquadaOne';
+  color: var(--color-white);
+  font-size: 6rem;
+  margin-bottom: 3rem;
+  span {
+    color: var(--color-orange);
+    display: block;
+    font-size: 10rem;
+  }
+}

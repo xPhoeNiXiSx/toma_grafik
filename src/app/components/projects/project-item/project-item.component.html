@@ -1,56 +1,56 @@
 <div class="project-carousel__item" [class.is-active]="isActive">
-  <div class="project">
-    <div
-      class="project__thumbnail"
-    >
-      <img
-        height="600"
-        *ngIf="project.thumbnail.url !== ''"
-        [src]="project.thumbnail.url"
-        alt="{{ project.thumbnail.title }}"
-        [ngClass]="{'animate__animated animate__fadeIn animate__slower' : isActive}"
-      >
-      <!-- <img height="600" *ngIf="project.photos" [src]="getPhotoThumbnail(project)" alt=""> -->
-    </div>
-    <div class="project__content">
-      <div class="project__header">
-        <h1 class="project__title">{{ project.title }}</h1>
-        <div class="project__collection">
-          <p>{{ project.collection }}</p>
-        </div>
-      </div>
-      <div class="project__description">
-        <!-- <div class="project__size">
-          <div class="project__size-item">
-            <span>A5</span>
-          </div>
-          <div class="project__size-item">
-            <span>A4</span>
-          </div>
-          <div class="project__size-item">
-            <span>A3</span>
-          </div>
-        </div> -->
-        <!-- <p><span>Format</span>{{ project.sizeWidth }} x {{ project.sizeHeight }}</p> -->
-        <!-- <p><span>Collection</span>{{ project.collection }}</p> -->
-        <!-- <p><span>Creation date</span>{{ project.date | date }}</p> -->
-      </div>
-      <div class="project__footer">
-        <!-- <span class="project__price">
-          <span>€</span> 18,10
-        </span>
-        <a href="/" class="btn btn-etsy">Acheter sur <span>Etsy</span></a> -->
-      </div>
-      <!-- <div class="project__photos" *ngIf="project.photos.length">
-        <button
-          class="btn"
-          *ngFor="let photo of project.photos; let j=index"
-          [class.is-active]="project.thumbnail.url === photo.url"
-          (click)="goToPhoto(j)"
+  <div class="container">
+    <div class="project">
+      <div class="project__thumbnail">
+        <img
+          height="600"
+          *ngIf="project.thumbnail.url !== ''"
+          [src]="project.thumbnail.url"
+          alt="{{ project.thumbnail.title }}"
+          [ngClass]="{'animate__animated animate__fadeIn animate__slower' : isActive}"
         >
-          <img height="100" *ngIf="photo.url !== ''" [src]="photo.url" alt="{{ photo.title }} - {{ photo.description }}">
-        </button>
-      </div> -->
+        <!-- <img height="600" *ngIf="project.photos" [src]="getPhotoThumbnail(project)" alt=""> -->
+      </div>
+      <div class="project__content">
+        <div class="project__header">
+          <h1 class="project__title">{{ project.title }}</h1>
+          <div class="project__collection">
+            <p>{{ project.collection }}</p>
+          </div>
+        </div>
+        <div class="project__description">
+          <!-- <div class="project__size">
+            <div class="project__size-item">
+              <span>A5</span>
+            </div>
+            <div class="project__size-item">
+              <span>A4</span>
+            </div>
+            <div class="project__size-item">
+              <span>A3</span>
+            </div>
+          </div> -->
+          <!-- <p><span>Format</span>{{ project.sizeWidth }} x {{ project.sizeHeight }}</p> -->
+          <!-- <p><span>Collection</span>{{ project.collection }}</p> -->
+          <!-- <p><span>Creation date</span>{{ project.date | date }}</p> -->
+        </div>
+        <div class="project__footer">
+          <!-- <span class="project__price">
+            <span>€</span> 18,10
+          </span>
+          <a href="/" class="btn btn-etsy">Acheter sur <span>Etsy</span></a> -->
+        </div>
+        <!-- <div class="project__photos" *ngIf="project.photos.length">
+          <button
+            class="btn"
+            *ngFor="let photo of project.photos; let j=index"
+            [class.is-active]="project.thumbnail.url === photo.url"
+            (click)="goToPhoto(j)"
+          >
+            <img height="100" *ngIf="photo.url !== ''" [src]="photo.url" alt="{{ photo.title }} - {{ photo.description }}">
+          </button>
+        </div> -->
+      </div>
     </div>
   </div>
 </div>

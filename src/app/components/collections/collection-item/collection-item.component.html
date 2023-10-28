@@ -9,6 +9,12 @@
     </ng-container>
   </div>
   <div class="collection-action">
-    <a [routerLink]="'/collections/'+collectionSlug" class="btn btn-primary">Voir plus</a>
+    <a 
+      [routerLink]="'/collections/'+collectionSlug" 
+      class="btn btn-primary"
+      [queryParams]="{id: 1}"
+    >
+      Voir plus
+    </a>
   </div>
 </div>

@@ -1,10 +1,11 @@
 .section {
+  min-height: 100vh;
+  padding: 10rem 0;
 
   &__content {
-    min-height: 100vh;
+    height: 100%;
     display: flex;
     align-items: center;
-    padding: 10rem 0;
   }
 
   // CATEGORY
@@ -52,6 +53,42 @@
           opacity: 1;
         }
       }
+    }
+  }
+}
+
+h2 {
+  font-family: 'SquadaOne';
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  span {
+    position: relative;
+    padding: 0 4rem;
+    &::after {
+      content: '';
+      width: 0.8rem;
+      height: 0.8rem;
+      border-radius: 50%;
+      background: var(--color-orange);
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &::before {
+      content: '';
+      width: 0.8rem;
+      height: 0.8rem;
+      border-radius: 50%;
+      background: var(--color-orange);
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
     }
   }
 }

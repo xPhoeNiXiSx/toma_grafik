@@ -19,9 +19,7 @@ import { ProcessComponent } from './components/process/process.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { CollectionsModule } from './components/collections/collections.module';
 import { RouterModule } from '@angular/router';
-import { HomeCollectionsComponent } from './components/home/home-collections/home-collections.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
-import { HomeOneComponent } from './components/home/home-one/home-one.component';
 import { MenuComponent } from './components/menu/menu.component';
 
 //Firebase & Firestore
@@ -36,6 +34,7 @@ import { GridComponent } from './components/landing/grid/grid.component';
 import { CategoryComponent } from './components/landing/category/category.component';
 import { SlideshowComponent } from './components/landing/slideshow/slideshow.component';
 import { FooterComponent } from './components/landing/footer/footer.component';
+import { BandComponent } from './components/landing/band/band.component';
 
 @NgModule({
   declarations: [
@@ -45,13 +44,11 @@ import { FooterComponent } from './components/landing/footer/footer.component';
     ProjectItemComponent,
     HomeComponent,
     LastComponent,
-    HomeOneComponent,
     IconComponent,
     WorkComponent,
     AboutComponent,
     ProcessComponent,
     ContactComponent,
-    HomeCollectionsComponent,
     NotfoundComponent,
     MenuComponent,
     LandingComponent,
@@ -60,6 +57,7 @@ import { FooterComponent } from './components/landing/footer/footer.component';
     CategoryComponent,
     SlideshowComponent,
     FooterComponent,
+    BandComponent,
   ],
   imports: [
     FormsModule,
