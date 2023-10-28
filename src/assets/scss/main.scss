@@ -2,6 +2,13 @@
 @use 'mixins' as *;
 @use 'fonts' as *;
 
+* {
+  &::selection {
+    color: var(--color-bg);
+    background: var(--color-white);
+  }
+}
+
 html {
   font-size: 62.5%;
 }

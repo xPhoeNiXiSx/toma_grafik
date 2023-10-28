@@ -30,11 +30,12 @@
 h1 {
   font-family: 'SquadaOne';
   color: var(--color-white);
-  font-size: 4rem;
+  font-size: 6rem;
+  margin-bottom: 3rem;
   span {
-    color: var(--color-white);
+    color: var(--color-orange);
     display: block;
-    font-size: 8rem;
+    font-size: 10rem;
   }
 }
 
@@ -43,7 +44,7 @@ h1 {
   &__content {
     background: var(--color-white);
     width: 42rem;
-    height: 60rem;
+    height: clamp(200px, 60rem, 80vh);
     border-radius: .4rem;
     overflow: hidden;
     position: relative;

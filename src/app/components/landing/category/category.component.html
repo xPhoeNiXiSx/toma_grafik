@@ -1,13 +1,31 @@
 <section class="section is-category">
   <div class="section__content">
     <div class="category-list">
-      <a class="category-link" data-aos="flip-up" data-aos-delay="300" href="">
+      <a 
+        class="category-link" 
+        data-aos="flip-up" 
+        data-aos-delay="300" 
+        [routerLink]="'/collections/nantes'"
+        [queryParams]="{id: 1}"
+      >
         <span>Nantes</span>
       </a>
-      <a class="category-link" data-aos="flip-up" data-aos-delay="300" href="">
+      <a 
+        class="category-link" 
+        data-aos="flip-up" 
+        data-aos-delay="300" 
+        [routerLink]="'/collections/japan'"
+        [queryParams]="{id: 1}"
+      >
         <span>Japan store</span>
       </a>
-      <a class="category-link" data-aos="flip-up" data-aos-delay="300" href="">
+      <a 
+        class="category-link" 
+        data-aos="flip-up" 
+        data-aos-delay="300" 
+        [routerLink]="'/collections/cocktail'"
+        [queryParams]="{id: 1}"
+      >
         <span>Cocktail</span>
       </a>
     </div>

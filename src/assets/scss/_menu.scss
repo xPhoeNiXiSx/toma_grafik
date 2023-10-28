@@ -20,11 +20,15 @@
     pointer-events: all;
   }
 
-  .container {
+  &-content {
     height: 100%;
+    max-width: 120rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 4rem;
   }
 
-  ul {
+  &-list {
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -37,14 +41,14 @@
     }
   }
 
-  a {
+  &-link {
     font-size: clamp(24px, 15rem, 16vw);
     line-height: min(16vw, 10rem);
     color: var(--color-white);
     font-family: "SquadaOne";
     position: relative;
     display: block;
-    padding: 1rem 0;
+    padding: 1rem 4rem;
     &::before {
       content: '';
       height: 0;
@@ -78,11 +82,20 @@
   left: 0;
   right: 0;
   z-index: 501;
-  opacity: 0;
   transition: all .5s .5s ease-in-out;
-  &.is-open {
-    opacity: 1;
+  padding: 4.8rem 0;
+
+  &-content {
+    height: 100%;
+    max-width: 120rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
+
 }
 
 .menu__socials {
@@ -92,11 +105,12 @@
   display: flex;
   align-items: center;
   gap: 3rem;
-  padding: 4.8rem 0;
   position: relative;
+
   a {
     display: block;
     position: relative;
+
     &:after {
       content: '';
       width: 0.9rem;
@@ -111,6 +125,7 @@
       transition: all .5s ease-in-out;
       mix-blend-mode: difference;
     }
+
     &:hover, &:focus {
       &::after {
         top: 50%;
@@ -118,5 +133,7 @@
         transform: scale(4) translateX(50%) translateY(-50%);
       }
     }
+
   }
+
 }
