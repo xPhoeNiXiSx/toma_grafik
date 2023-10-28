@@ -1,3 +1,5 @@
+@use 'src/assets/scss/mixins' as *;
+
 .section {
   &__content {
     min-height: 100vh;
@@ -39,8 +41,15 @@
     width: 80vw;
     height: 80vw;
     transform: translateX(-50%);
-    border-radius: 80vw;
+    border-radius: 50%;
     border: 5px solid var(--color-bg);
+
+    @include breakpoint(sm) {
+      width: 110vw;
+      height: 110vw;
+      top: 8rem;
+    }
+
     &::before {
       content: '';
       height: 2.8rem;
@@ -52,6 +61,7 @@
       left: 50%;
       transform: translateX(-50%);
     }
+    
   }
   &__content {
     min-height: 100vh;

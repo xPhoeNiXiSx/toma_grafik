@@ -35,11 +35,9 @@ export class AppComponent implements OnInit, AfterViewInit {
   
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
-    // console.debug("Scroll Event", document.body.scrollTop);
     let viewportHeight = window.innerHeight;
     console.log("Scroll Event", window.scrollY );
-    if(window.scrollY > viewportHeight) {
-      // console.log('Scroll Ok');
+    if(window.scrollY > (viewportHeight * 0.5)) {
       this.document.body.classList.add('is-scroll');
     } else {
       this.document.body.classList.remove('is-scroll');

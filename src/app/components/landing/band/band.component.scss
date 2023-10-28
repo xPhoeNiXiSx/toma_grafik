@@ -1,3 +1,5 @@
+@use 'src/assets/scss/mixins' as *;
+
 .section {
   overflow: hidden;
   padding: 4rem 0;
@@ -26,9 +28,18 @@
   width: 110vw;
   min-width: 190rem;
   transform: translateX(-5vw) rotate(1deg);
+  @include breakpoint(sm) {
+    font-size: 3rem;
+    min-width: 70rem;
+    height: 7rem;
+  }
+
   &:nth-child(2) {
     width: 150vw;
     min-width: 240rem;
     transform: translateX(-25vw) rotate(-2deg);
+    @include breakpoint(sm) {
+      min-width: 95rem;
+    }
   }
 }

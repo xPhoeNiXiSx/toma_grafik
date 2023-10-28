@@ -7,6 +7,9 @@
   background: transparent;
   transition: all .3s ease-in-out;
   display: flex;
+  @include breakpoint(sm) {
+    --h-header: 6rem;
+  }
 
   &__content {
     display: flex;
@@ -26,6 +29,10 @@
 
   &-logo  > img {
     height: 7rem;
+    transition: all .3s ease-in-out;
+    @include breakpoint(sm) {
+      height: 4rem;
+    }
   }
 
 }

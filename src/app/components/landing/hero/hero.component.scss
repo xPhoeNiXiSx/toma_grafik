@@ -1,9 +1,14 @@
+@use 'src/assets/scss/mixins' as *;
+
 .section {
   &__content {
     min-height: 100vh;
     width: 100%;
     display: flex;
     align-items: center;
+    @include breakpoint(sm) {
+      padding-top: 6rem;
+    }
   }
 }
 
@@ -18,6 +23,9 @@
   z-index: -1;
   display: flex;
   justify-content: space-between;
+  @include breakpoint(sm) {
+    inset: 0 3rem;
+  }
 }
 
 .line-item {
@@ -32,16 +40,21 @@
   &__content {
     background: var(--color-white);
     width: 42rem;
-    height: clamp(200px, 60rem, 80vh);
+    max-width: 80vw;
+    height: clamp(200px, 60rem, 60vh);
     border-radius: .4rem;
     overflow: hidden;
     position: relative;
+    
     &::after {
       content: '';
       position: absolute;
       inset: 0;
       background: var(--color-white);
       mix-blend-mode: color;
+      @include breakpoint(sm) {
+        display: none;
+      }
     }
   }
   &__eye {
@@ -55,6 +68,9 @@
     background: var(--color-white);
     border: 2px solid var(--color-orange);
     overflow: hidden;
+    @include breakpoint(sm) {
+      display: none;
+    }
     > img {
       transform: scale(1.6);
       transform-origin: left top;
