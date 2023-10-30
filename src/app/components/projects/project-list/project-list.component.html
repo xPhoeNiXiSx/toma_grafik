@@ -1,7 +1,4 @@
 <div class="project-carousel animate__animated animate__fadeIn animate__slower" *ngIf="projects?.length !== 0">
-  <div class="project-counter">
-    <span>{{ selectedIndex + 1 }}</span>/ {{ projects.length }}
-  </div>
   <div
     class="project-carousel__wrap"
     [style.width]="'calc(' + projects.length + '*100vw)'"
@@ -13,11 +10,19 @@
     </ng-container>
   </div>
   <div class="project-carousel__nav">
-    <button title="Précédent" class="btn btn-arrows is-prev" (click)="prevProject()">
-      <span></span>
-    </button>
-    <button title="Suivant" class="btn btn-arrows is-next" (click)="nextProject()">
-      <span></span>
-    </button>
+    <a [routerLink]="'/collections/'" class="btn btn-back">
+      Retour
+    </a>
+    <div class="project-carousel__nav-content">
+      <button title="Précédent" class="btn btn-arrows is-prev" (click)="prevProject()">
+        <span></span>
+      </button>
+      <button title="Suivant" class="btn btn-arrows is-next" (click)="nextProject()">
+        <span></span>
+      </button>
+    </div>
+    <div class="project-counter" *ngIf="projects?.length !== 1">
+      <span>{{ selectedIndex + 1 }}</span>/ {{ projects.length }}
+    </div>
   </div>
 </div>

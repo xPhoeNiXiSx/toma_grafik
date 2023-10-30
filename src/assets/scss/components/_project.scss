@@ -19,8 +19,16 @@
     position: relative;
     z-index: 10;
     height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     @include breakpoint-min(sm) {
       flex: 1;
+    }
+    &-content {
+      overflow: hidden;
+      height: 100%;
+      border-radius: 10px;
     }
     > img {
       position: relative;
@@ -47,6 +55,7 @@
       display: none;
     }
   }
+
   &__header {
     display: flex;
     align-items: center;
@@ -149,9 +158,6 @@
 }
 
 .project-counter {
-  position: fixed;
-  bottom: 1.5rem;
-  right: 3rem;
   font-size: 1.6rem;
   text-align: right;
   span {
@@ -161,33 +167,24 @@
 }
 
 .project-carousel {
-  // --decalage: 15vw;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
   display: flex;
   align-items: center;
-  // @include breakpoint(md) {
-  //   --decalage: 10vw;
-  // }
-  // @include breakpoint(sm) {
-  //   --decalage: 5vw;
-  // }
+
   &__wrap {
     display: flex;
-    // margin-left: var(--decalage);
     transition: all .5s ease-in;
     @include breakpoint(sm) {
-      padding-top: 10rem;
       padding-bottom: 4rem;
       height: 100%;
     }
   }
+
   &__item {
     flex-grow: 0;
     flex-shrink: 0;
-    // flex-basis: calc(100vw - calc(2 * var(--decalage)));
-    // width: calc(100vw - calc(2 * var(--decalage)));
     flex-basis: 100vw;
     width: 100vw;
     display: flex;
@@ -195,19 +192,10 @@
     justify-content: center;
     opacity: 0.3;
     transition: all .5s ease-in;
-    @include breakpoint(sm) {
-      // flex-basis: 5vw;
-      // width: 5vw;
-    }
 
     // Active
     &.is-active {
       opacity: 1;
-
-      // @include breakpoint(sm) {
-      //   flex-basis: 90vw;
-      //   width: 90vw;
-      // }
       .project__thumbnail {
         transform: scale(1);
         transition: all .5s ease-in;
@@ -218,14 +206,25 @@
       }
     }
   }
+
+  // Nav buttons
   &__nav {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
     position: fixed;
     bottom: 0;
     left: 0;
     padding: 1.5rem 3rem;
     gap: 3rem;
+    &-content {
+      display: flex;
+      gap: 1.5rem;
+    }
   }
+
+  .btn-back {
+  }
+
 }

@@ -5,6 +5,7 @@ h1 {
   margin-bottom: 3rem;
   @include breakpoint(sm) {
     font-size: 3rem;
+    text-align: center;
   }
   span {
     color: var(--color-orange);

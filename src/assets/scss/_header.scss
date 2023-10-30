@@ -7,8 +7,12 @@
   background: transparent;
   transition: all .3s ease-in-out;
   display: flex;
+  border-bottom: 1px solid transparent;
+
   @include breakpoint(sm) {
-    --h-header: 6rem;
+    height: var(--h-header-sm);
+    background: var(--color-bg);
+    border-bottom-color: var(--color-white);
   }
 
   &__content {
@@ -44,6 +48,7 @@
   --h-header: 6rem;
   background: var(--color-bg);
   padding: .5rem 0;
+  border-bottom-color: var(--color-white);
   &-logo > img{
     height: 4rem;
   }

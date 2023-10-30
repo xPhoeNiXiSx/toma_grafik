@@ -12,12 +12,21 @@
   --color-etsy: var(--color-golden);
   // --color-etsy: #F1641E;
   --color-etsy-rgb: 241,100,30;
-  --ff: 'BerkshireSwash', Arial, sans-serif;
+  --ff: 'SquadaOne', Arial, sans-serif;
 
   --h-header: 10rem;
+  --h-header-sm: 6rem;
 
   --shadow: 0rem 0rem .5rem 0 rgba(0,0,0,25%);
   --shadow-card: 1.5rem 1.5rem 1.5rem 0 rgba(0,0,0,25%);
+
+  // BreakPoints
+  --breakpoint-xs: 480px;
+  --breakpoint-sm: 768px;
+  --breakpoint-md: 992px;
+  --breakpoint-l: 1200px;
+  --breakpoint-xl: 1400px;
+
 }
 
 $breakpoint-xs: 480px;

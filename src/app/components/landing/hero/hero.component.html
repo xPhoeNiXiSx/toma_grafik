@@ -11,20 +11,16 @@
           L'univers artistique de
           <span>Toma</span>
         </h1>
-        <ul class="menu__socials d-none d-sm-flex">
-          <li>
-            <a href="" title="Instagram">Ig</a>
-          </li>
-          <li>
-            <a href="" title="Behance">Be</a>
-          </li>
-          <li>
-            <a href="" title="Boutique en ligne">Shop</a>
-          </li>
-        </ul>
+        <app-socials></app-socials>
       </div>
       <div class="col-sm-6 d-flex justify-content-center">
-        <div class="one" data-aos="fade-left" data-aos-delay="100">
+        <div 
+          class="one" 
+          data-aos="fade-left" 
+          data-aos-delay="100"
+          [routerLink]="'/collections/nantes'"
+          [queryParams]="{id: 1}"
+        >
           <div class="one__content">
             <img class="img-contain" src="assets/img/one/4.jpg">
           </div>

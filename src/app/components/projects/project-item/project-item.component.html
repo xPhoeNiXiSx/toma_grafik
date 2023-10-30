@@ -2,14 +2,16 @@
   <div class="container">
     <div class="project">
       <div class="project__thumbnail">
-        <img
-          height="600"
-          *ngIf="project.thumbnail.url !== ''"
-          [src]="project.thumbnail.url"
-          alt="{{ project.thumbnail.title }}"
-          [ngClass]="{'animate__animated animate__fadeIn animate__slower' : isActive}"
-        >
-        <!-- <img height="600" *ngIf="project.photos" [src]="getPhotoThumbnail(project)" alt=""> -->
+        <div class="project__thumbnail-content">
+          <img
+            height="600"
+            class="img-contain"
+            *ngIf="project.thumbnail.url !== ''"
+            [src]="project.thumbnail.url"
+            alt="{{ project.thumbnail.title }}"
+            [ngClass]="{'animate__animated animate__fadeIn animate__slower' : isActive}"
+          >
+        </div>
       </div>
       <div class="project__content">
         <div class="project__header">

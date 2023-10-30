@@ -1,0 +1,38 @@
+.cursor-category {
+  --size: 10rem;
+  margin-top: calc(var(--size) / -2);
+  margin-left: calc(var(--size) / -2);
+  mix-blend-mode: difference;
+  z-index: 600;
+  position: fixed;
+  top: 0;
+  left: 0;
+  cursor: none;
+  display: none;
+  opacity: 0;
+  transition: opacity .5s ease-in-out;
+  pointer-events: none;
+
+  &__content {
+    background: transparent url('/assets/img/cursor-category.svg') center center no-repeat;
+    animation: linear 4s infinite rotateScroll;
+    height: var(--size);
+    width: var(--size);
+  }
+
+  &.is-visible {
+    display: block;
+    opacity: 1;
+    cursor: none;
+  }
+
+}
+
+@keyframes rotateScroll{
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

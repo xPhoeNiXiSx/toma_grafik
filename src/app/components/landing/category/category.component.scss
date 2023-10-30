@@ -1,19 +1,23 @@
 @use 'src/assets/scss/mixins' as *;
 
 .section {
-  min-height: 100vh;
-  padding: 10rem 0;
-
+  
   &__content {
     height: 100%;
     display: flex;
     align-items: center;
   }
-
+  
   // CATEGORY
   &.is-category {
+    padding: 5rem 0;
     position: relative;
     overflow: hidden;
+    @include breakpoint-min(sm) {
+      min-height: 100vh;
+      padding: 10rem 0;
+    }
+
     .category-list {
       display: flex;
       flex-direction: column;
@@ -52,7 +56,7 @@
         pointer-events: none;
       }
       &:hover, &:focus {
-        // cursor: none;
+        cursor: none;
         &::after {
           transform: rotate(-5deg) scale(1.2) translateY(30%);
           opacity: 1;
@@ -99,41 +103,5 @@ h2 {
       top: 50%;
       transform: translateY(-50%);
     }
-  }
-}
-
-.cursor-category {
-  --size: 10rem;
-  margin-top: calc(var(--size) / -2);
-  margin-left: calc(var(--size) / -2);
-  mix-blend-mode: difference;
-  z-index: 600;
-  position: fixed;
-  top: 0;
-  left: 0;
-  cursor: none;
-  display: none;
-  pointer-events: none;
-
-  &__content {
-    background: transparent url('/assets/img/cursor-category.svg') center center no-repeat;
-    animation: linear 4s infinite rotateScroll;
-    height: var(--size);
-    width: var(--size);
-  }
-
-  &.is-visible {
-    display: block;
-    cursor: none;
-  }
-
-}
-
-@keyframes rotateScroll{
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
   }
 }

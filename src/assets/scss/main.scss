@@ -24,6 +24,11 @@ body {
   &::-webkit-scrollbar {
     display: none;
   }
+
+  @include breakpoint(sm) {
+    padding-top: var(--h-header-sm);
+  }
+
 }
 
 h1, h2, h3, h4, h5, h6 {

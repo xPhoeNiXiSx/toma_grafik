@@ -35,6 +35,7 @@ import { CategoryComponent } from './components/landing/category/category.compon
 import { SlideshowComponent } from './components/landing/slideshow/slideshow.component';
 import { FooterComponent } from './components/landing/footer/footer.component';
 import { BandComponent } from './components/landing/band/band.component';
+import { SocialsComponent } from './components/socials/socials.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +59,7 @@ import { BandComponent } from './components/landing/band/band.component';
     SlideshowComponent,
     FooterComponent,
     BandComponent,
+    SocialsComponent,
   ],
   imports: [
     FormsModule,

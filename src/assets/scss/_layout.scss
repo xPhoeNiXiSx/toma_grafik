@@ -1,7 +1,5 @@
 .page {
-  min-height: 100dvh;
-  padding-top: var(--h-header);
-  // min-height: calc( 100dvh - var(--h-header));
+  min-height: calc( 100dvh - var(--h-header));
   width: 100vw;
   overflow: hidden;
   &.is-one {

@@ -185,5 +185,15 @@
     }
   }
 
+  &.btn-back {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 5rem;
+    border: 1px solid var(--color-orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
 }
 
