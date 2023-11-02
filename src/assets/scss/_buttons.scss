@@ -97,7 +97,7 @@
   &.btn-etsy {
     --alpha: 0.6;
     background: rgba(var(--color-bg));
-    box-shadow: 0 0 1rem 0 rgba(var(--color-etsy-rgb),var(--alpha));
+    // box-shadow: 0 0 1rem 0 rgba(var(--color-etsy-rgb),var(--alpha));
     border: 1px solid var(--color-etsy);
     height: 4rem;
     border-radius: 2rem;
@@ -105,10 +105,10 @@
     align-items: center;
     padding: 0 2rem;
     gap: .4rem;
-    font-weight: 600;
     transform: translateY(0);
     transition: all .5s ease-in-out;
     position: relative;
+    font-size: 1.6rem;
     span {
       color: var(--color-etsy);
     }

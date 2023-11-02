@@ -15,7 +15,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   public cursor?: ElementRef;
   @ViewChild('cursorDot') //Get element #cursorDot
   public cursorDot?: ElementRef;
-  
+
   constructor(
     private renderer: Renderer2,
     private router: Router,
@@ -23,7 +23,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     ) {
       this.router.events.subscribe((event) => {
       if (event instanceof NavigationStart) {
-        console.log(event.url);
+        // console.log(event.url);
         if(event.url.includes('collections')) {
           document.body.classList.add("is-collections");
         } else {
@@ -32,11 +32,11 @@ export class AppComponent implements OnInit, AfterViewInit {
       }
     });
   }
-  
+
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
     let viewportHeight = window.innerHeight;
-    console.log("Scroll Event", window.scrollY );
+    // console.log("Scroll Event", window.scrollY );
     if(window.scrollY > (viewportHeight * 0.5)) {
       this.document.body.classList.add('is-scroll');
     } else {

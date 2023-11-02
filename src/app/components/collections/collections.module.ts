@@ -7,6 +7,7 @@ import { CollectionDetailComponent } from './collection-detail/collection-detail
 import { ProjectService } from 'src/app/services/project/project.service';
 import { CollectionPageComponent } from './collection-page/collection-page.component';
 import { RouterModule } from '@angular/router';
+import { CollectionService } from 'src/app/services/collection.service';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { RouterModule } from '@angular/router';
     RouterModule
   ],
   providers: [
-    ProjectService
+    ProjectService,
+    CollectionService
   ],
   bootstrap: []
 })

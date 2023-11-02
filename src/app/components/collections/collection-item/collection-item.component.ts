@@ -32,7 +32,7 @@ export class CollectionItemComponent implements OnInit {
     this.projectService.getCollectionProjects(slug).subscribe(
       projects => {
         this.collectionProjects = projects;
-        console.log(this.collectionProjects);
+        // console.log(this.collectionProjects);
         // this.collectionProjectsFiltered = projects;
       }
     );

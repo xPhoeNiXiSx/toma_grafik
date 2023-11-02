@@ -1,75 +1,52 @@
 [
   {
-    "id": 3,
-    "title": "Nantes",
+    "id": 1,
+    "title": "La Grue Jaune",
+    "collection": "nantes",
+    "price": "24",
+    "link": "https://tomagrafik.sumupstore.com/article/la-grue-jaune",
     "photos": [
       {
         "id": 1,
-        "url": "assets/img/projects/project3.jpg",
-        "title": "",
+        "url": "assets/img/projects/nantes/1.jpg",
+        "title": "La Grue Jaune nantaise",
         "description": ""
       }
     ],
     "black": false,
-    "sizeWidth": 1000,
-    "sizeHeight": 800,
-    "collection": "city",
+    "sizeWidth": 297,
+    "sizeHeight": 400,
     "date": "2022-04-01",
     "reference": "",
     "thumbnail": {
       "id": 1,
-      "url": "assets/img/projects/project3.jpg",
-      "title": "Image à la une de Nantes",
-      "description": ""
-    }
-  },
-  {
-    "id": 4,
-    "title": "British",
-    "photos": [],
-    "black": false,
-    "sizeWidth": 1000,
-    "sizeHeight": 800,
-    "collection": "house",
-    "date": "2022-06-13",
-    "reference": "",
-    "thumbnail": {
-      "id": 1,
-      "url": "assets/img/projects/project4.jpg",
+      "url": "assets/img/projects/nantes/1.jpg",
       "title": "",
       "description": ""
     }
   },
   {
-    "id": 5,
-    "title": "Italian house",
-    "photos": [],
+    "id": 2,
+    "title": "La Tour LU",
+    "collection": "nantes",
+    "price": "24",
+    "link": "https://tomagrafik.sumupstore.com/article/la-tour-lu",
+    "photos": [
+      {
+        "id": 1,
+        "url": "assets/img/projects/nantes/2.jpg",
+        "title": "La Tour LU",
+        "description": ""
+      }
+    ],
     "black": false,
-    "sizeWidth": 1000,
-    "sizeHeight": 800,
-    "collection": "house",
-    "date": "2022-04-22",
+    "sizeWidth": 297,
+    "sizeHeight": 400,
+    "date": "2022-09-01",
     "reference": "",
     "thumbnail": {
       "id": 1,
-      "url": "assets/img/projects/project5.jpg",
-      "title": "",
-      "description": ""
-    }
-  },
-  {
-    "id": 6,
-    "title": "Japan toma shop",
-    "photos": [],
-    "black": true,
-    "sizeWidth": 1000,
-    "sizeHeight": 800,
-    "collection": "house",
-    "date": "2022-05-01",
-    "reference": "",
-    "thumbnail": {
-      "id": 1,
-      "url": "assets/img/projects/project6.jpg",
+      "url": "assets/img/projects/nantes/2.jpg",
       "title": "",
       "description": ""
     }

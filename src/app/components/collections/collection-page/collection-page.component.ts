@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Collection } from 'src/app/entity/collection.class';
+import { CollectionService } from 'src/app/services/collection.service';
 
 @Component({
   selector: 'app-collection-page',
@@ -7,28 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CollectionPageComponent implements OnInit {
   public filter = "";
-  public collections = [
-    {
-      name :'cocktail',
-      id : '01',
-    },
-    {
-      name :'japan',
-      id : '02',
-    },
-    {
-      name :'nantes',
-      id : '03',
-    },
-    // {
-    //   name :'projects',
-    //   id : '04',
-    // }
-  ];
+  public collections:Collection[];
 
-  constructor() { }
+  constructor(
+    private readonly collectionService: CollectionService,
+  ) { }
 
   ngOnInit(): void {
+    this.collectionService.getCollections().subscribe(collections => this.collections = collections);
   }
 
   public filterReinit(): void {

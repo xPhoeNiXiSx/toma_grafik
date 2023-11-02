@@ -2,6 +2,12 @@
   min-height: calc( 100dvh - var(--h-header));
   width: 100vw;
   overflow: hidden;
+  padding-top: var(--h-header);
+
+  @include breakpoint(sm) {
+    padding-top: var(--h-header-sm);
+  }
+
   &.is-one {
     display: flex;
     width: 100%;

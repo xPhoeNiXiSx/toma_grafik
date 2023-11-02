@@ -20,6 +20,7 @@ body {
   background: var(--color-bg) url(../img/bg.jpg) center center no-repeat;
   background-size: cover;
   min-height: 100dvh;
+
   // cursor: url(../img/cursor.svg) 8 8, auto;
   &::-webkit-scrollbar {
     display: none;
