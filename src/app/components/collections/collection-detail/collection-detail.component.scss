@@ -3,6 +3,7 @@
 
 .project {
   position: relative;
+  
   h2 {
     font-size: 1.8rem;
     position: absolute;
@@ -13,10 +14,12 @@
     opacity: 0;
     text-align: center;
   }
+
   &__thumbnail {
-    // height: 20rem;
     overflow: hidden;
+    border-radius: .5rem;
   }
+
   img {
     width: 100%;
     height: 100%;
@@ -24,14 +27,7 @@
     opacity: 1;
     transition: all .5s ease-in-out;
     content-visibility: auto;
+    aspect-ratio: 21/29.7; //A4 ratio
   }
-  // &:hover {
-  //   cursor: pointer;
-  //   h2 {
-  //     opacity: 1;
-  //   }
-  //   img {
-  //     opacity: 0.6;
-  //   }
-  // }
+
 }

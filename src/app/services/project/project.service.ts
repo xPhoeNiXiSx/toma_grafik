@@ -7,7 +7,7 @@ import { Project } from '../../entity/project.class';
   providedIn: 'root'
 })
 export class ProjectService {
-  private projectsUrl = 'assets/data/projects.json';
+  private projectsUrl = 'data/projects.json';
 
   constructor(private http: HttpClient) {}
 
@@ -16,7 +16,7 @@ export class ProjectService {
   }
 
   getCollectionProjects(slug: string): Observable<Project[]> {
-    return this.http.get<Project[]>('assets/data/projects.json')
+    return this.http.get<Project[]>('data/projects.json')
     .pipe(
       map(project => project.filter(project => project.collection === slug)),
     )

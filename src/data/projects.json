@@ -1,0 +1,210 @@
+[
+  {
+    "id": 1,
+    "title": "La Grue Jaune",
+    "collection": "nantes",
+    "price": "24",
+    "link": "https://tomagrafik.sumupstore.com/article/la-grue-jaune",
+    "photos": [
+      {
+        "id": 1,
+        "url": "assets/img/projects/nantes/1.jpg",
+        "title": "La Grue Jaune nantaise",
+        "description": ""
+      }
+    ],
+    "black": false,
+    "sizeWidth": 297,
+    "sizeHeight": 400,
+    "date": "2022-04-01",
+    "reference": "",
+    "thumbnail": {
+      "id": 1,
+      "url": "assets/img/projects/nantes/1.jpg",
+      "title": "",
+      "description": ""
+    }
+  },
+  {
+    "id": 2,
+    "title": "La Tour LU",
+    "collection": "nantes",
+    "price": "24",
+    "link": "https://tomagrafik.sumupstore.com/article/la-tour-lu",
+    "photos": [
+      {
+        "id": 1,
+        "url": "assets/img/projects/nantes/2.jpg",
+        "title": "La Tour LU",
+        "description": ""
+      }
+    ],
+    "black": false,
+    "sizeWidth": 297,
+    "sizeHeight": 400,
+    "date": "2022-09-01",
+    "reference": "",
+    "thumbnail": {
+      "id": 1,
+      "url": "assets/img/projects/nantes/2.jpg",
+      "title": "",
+      "description": ""
+    }
+  },
+  {
+    "id": 3,
+    "title": "Spritz",
+    "collection": "cocktail",
+    "price": "",
+    "link": "",
+    "photos": [
+      {
+        "id": 1,
+        "url": "assets/img/projects/cocktail/spritz.jpg",
+        "title": "Cocktail - Spritz illustration",
+        "description": ""
+      }
+    ],
+    "black": false,
+    "sizeWidth": 297,
+    "sizeHeight": 400,
+    "date": "2022-08-15",
+    "reference": "",
+    "thumbnail": {
+      "id": 1,
+      "url": "assets/img/projects/cocktail/spritz.jpg",
+      "title": "",
+      "description": ""
+    }
+  },
+  {
+    "id": 4,
+    "title": "Piña Colada",
+    "collection": "cocktail",
+    "price": "",
+    "link": "",
+    "photos": [
+      {
+        "id": 1,
+        "url": "assets/img/projects/cocktail/pina.jpg",
+        "title": "Cocktail - Pina colada illustration",
+        "description": ""
+      }
+    ],
+    "black": false,
+    "sizeWidth": 297,
+    "sizeHeight": 400,
+    "date": "2022-08-15",
+    "reference": "",
+    "thumbnail": {
+      "id": 1,
+      "url": "assets/img/projects/cocktail/pina.jpg",
+      "title": "",
+      "description": ""
+    }
+  },
+  {
+    "id": 5,
+    "title": "Mojito",
+    "collection": "cocktail",
+    "price": "",
+    "link": "",
+    "photos": [
+      {
+        "id": 1,
+        "url": "assets/img/projects/cocktail/mojito.jpg",
+        "title": "Cocktail - Mojito illustration",
+        "description": ""
+      }
+    ],
+    "black": false,
+    "sizeWidth": 297,
+    "sizeHeight": 400,
+    "date": "2022-08-15",
+    "reference": "",
+    "thumbnail": {
+      "id": 1,
+      "url": "assets/img/projects/cocktail/mojito.jpg",
+      "title": "",
+      "description": ""
+    }
+  },
+  {
+    "id": 6,
+    "title": "Japan Store Toma",
+    "collection": "japan",
+    "price": "",
+    "link": "",
+    "photos": [
+      {
+        "id": 1,
+        "url": "assets/img/projects/japan/1.jpg",
+        "title": "Japan Store Illustration Toma",
+        "description": ""
+      }
+    ],
+    "black": false,
+    "sizeWidth": 297,
+    "sizeHeight": 400,
+    "date": "2023-05-12",
+    "reference": "",
+    "thumbnail": {
+      "id": 1,
+      "url": "assets/img/projects/japan/1.jpg",
+      "title": "",
+      "description": ""
+    }
+  },
+  {
+    "id": 7,
+    "title": "Japan Store HairCut",
+    "collection": "japan",
+    "price": "",
+    "link": "",
+    "photos": [
+      {
+        "id": 1,
+        "url": "assets/img/projects/japan/2.jpg",
+        "title": "Japan Store Illustration HairCut",
+        "description": ""
+      }
+    ],
+    "black": false,
+    "sizeWidth": 297,
+    "sizeHeight": 400,
+    "date": "2023-05-12",
+    "reference": "",
+    "thumbnail": {
+      "id": 1,
+      "url": "assets/img/projects/japan/2.jpg",
+      "title": "",
+      "description": ""
+    }
+  },
+  {
+    "id": 8,
+    "title": "Japan Store Dojo",
+    "collection": "japan",
+    "price": "",
+    "link": "",
+    "photos": [
+      {
+        "id": 1,
+        "url": "assets/img/projects/japan/3.jpg",
+        "title": "Japan Store Illustration Dojo",
+        "description": ""
+      }
+    ],
+    "black": false,
+    "sizeWidth": 297,
+    "sizeHeight": 400,
+    "date": "2023-05-12",
+    "reference": "",
+    "thumbnail": {
+      "id": 1,
+      "url": "assets/img/projects/japan/3.jpg",
+      "title": "",
+      "description": ""
+    }
+  }
+]

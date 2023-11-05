@@ -25,7 +25,8 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.svg",
-              "src/assets"
+              "src/assets",
+              "src/data"
             ],
             "styles": [
               "src/assets/css/grid.min.css",

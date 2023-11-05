@@ -7,7 +7,7 @@ import { Collection } from '../entity/collection.class';
   providedIn: 'root'
 })
 export class CollectionService {
-  private collectionsUrl = 'assets/data/collections.json';
+  private collectionsUrl = 'data/collections.json';
 
   constructor(private http: HttpClient) {}
 
