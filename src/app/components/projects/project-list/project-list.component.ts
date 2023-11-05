@@ -9,7 +9,7 @@ import { ProjectService } from 'src/app/services/project/project.service';
   styleUrls: ['./project-list.component.scss']
 })
 export class ProjectListComponent implements OnInit {
-  public collectionSlug: string;
+  // public collectionSlug: string;
   projects: Project[] = [];
   selectedIndex = 0;
 
@@ -22,20 +22,27 @@ export class ProjectListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    const routeSlug = this.activatedRoute.snapshot.paramMap.get('slug');
-    if(routeSlug) {
-      this.collectionSlug = routeSlug;
-      this.getProjects();
-    }
+    // const routeSlug = this.activatedRoute.snapshot.paramMap.get('slug');
+    // if(routeSlug) {
+    //   this.collectionSlug = routeSlug;
+    //   this.getProjects();
+    // }
+    this.getProjects();
     this.activatedRoute.queryParamMap.subscribe(params => {
       let paramId = Number(params.get('id'));
-      this.selectedIndex = paramId - 1;
+      this.selectedIndex = paramId - 1;     
     })
   }
 
   getProjects(): void {
-    this.projectService.getCollectionProjects(this.collectionSlug).subscribe(projects => this.projects = projects);
+    this.projectService.getProjects().subscribe(projects => this.projects = projects);
+    console.log(this.projects.length);
+    
   }
+
+  // getProjectsByCollection(): void {
+  //   this.projectService.getCollectionProjects(this.collectionSlug).subscribe(projects => this.projects = projects);
+  // }
 
   public prevProject(): void {
     if(this.selectedIndex === 0) {
