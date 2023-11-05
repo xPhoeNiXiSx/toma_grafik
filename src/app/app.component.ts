@@ -23,7 +23,6 @@ export class AppComponent implements OnInit, AfterViewInit {
     ) {
       this.router.events.subscribe((event) => {
       if (event instanceof NavigationStart) {
-        // console.log(event.url);
         if(event.url.includes('collections')) {
           document.body.classList.add("is-collections");
         } else {
@@ -36,7 +35,6 @@ export class AppComponent implements OnInit, AfterViewInit {
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
     let viewportHeight = window.innerHeight;
-    // console.log("Scroll Event", window.scrollY );
     if(window.scrollY > (viewportHeight * 0.5)) {
       this.document.body.classList.add('is-scroll');
     } else {

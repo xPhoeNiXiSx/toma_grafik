@@ -35,9 +35,7 @@ export class ProjectListComponent implements OnInit {
   }
 
   getProjects(): void {
-    this.projectService.getProjects().subscribe(projects => this.projects = projects);
-    console.log(this.projects.length);
-    
+    this.projectService.getProjects().subscribe(projects => this.projects = projects);    
   }
 
   // getProjectsByCollection(): void {

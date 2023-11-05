@@ -16,8 +16,8 @@ export class IconComponent implements OnInit {
 
   ngOnInit(): void {
     this.element.nativeElement.innetHTML = myIcons[this.name] || null;
-    console.log(this.element.nativeElement.innetHTML);
-    console.log(this.name)
+    // console.log(this.element.nativeElement.innetHTML);
+    // console.log(this.name)
   }
 
 }

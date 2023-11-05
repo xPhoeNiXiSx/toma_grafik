@@ -32,7 +32,6 @@ export class LandingComponent implements OnInit {
   onMouseEnter(event: MouseEvent) {
     if(event.target && this.cursor) {
       let targetElement = event.target as Element;
-      console.log(targetElement.classList);
       if(targetElement.classList.contains('category-link')) {
         this.cursor.nativeElement.classList.add('is-visible');
       } else {
