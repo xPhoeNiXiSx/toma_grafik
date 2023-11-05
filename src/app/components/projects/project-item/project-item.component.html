@@ -37,10 +37,14 @@
           <!-- <p><span>Creation date</span>{{ project.date | date }}</p> -->
         </div>
         <div class="project__footer">
-          <span class="project__price">
+          <span class="project__price" *ngIf="project.price">
             <span>€</span> {{ project.price }}
           </span>
-          <a href="{{ project.link }}" class="btn btn-etsy">Acheter sur le<span>Shop</span></a>
+          <a 
+            href="{{ project.link }}" 
+            *ngIf="project.link"
+            class="btn btn-shop"
+          >Acheter sur le<span>Shop</span></a>
         </div>
         <!-- <div class="project__photos" *ngIf="project.photos.length">
           <button
