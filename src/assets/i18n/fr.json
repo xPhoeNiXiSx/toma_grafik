@@ -1,8 +1,11 @@
 {
-  "Landing": {
-    "Hero": {
-      "Title": "L'univers artistique de",
-      "Span": "Toma"
-    }
-  }
+	"Collections": {
+		"Title": "Collections"
+	},
+	"Landing": {
+		"Hero": {
+			"Span": "Toma",
+			"Title": "L'univers artistique de"
+		}
+	}
 }

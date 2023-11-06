@@ -2,6 +2,7 @@ import { AfterViewInit, Component, ElementRef, HostListener, Inject, OnInit, Ren
 import { fadeIn, fadeInOutPage, fadeOut } from './app.animations';
 import { ChildrenOutletContexts, NavigationStart, Router, RouterOutlet } from '@angular/router';
 import { DOCUMENT } from '@angular/common';
+import {TranslateService} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-root',
@@ -19,8 +20,11 @@ export class AppComponent implements OnInit, AfterViewInit {
   constructor(
     private renderer: Renderer2,
     private router: Router,
+    private translate: TranslateService,
     @Inject(DOCUMENT) private document: Document,
     ) {
+      translate.setDefaultLang('fr');
+      translate.use('fr');
       this.router.events.subscribe((event) => {
       if (event instanceof NavigationStart) {
         if(event.url.includes('collections')) {

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 import { filter } from 'rxjs';
 
 @Component({
@@ -10,10 +11,14 @@ import { filter } from 'rxjs';
 export class HeaderComponent implements OnInit {
   public isOpen = false;
   public isLightActive = false;
+  public currentLang = "";
 
   constructor(
     private router: Router,
-  ) { }
+    private translate: TranslateService
+  ) {
+    this.currentLang = this.translate.currentLang;
+  }
 
   ngOnInit(): void {
     this.router.events.pipe(
@@ -23,6 +28,16 @@ export class HeaderComponent implements OnInit {
 
   public toggleMenu(): void {
     this.isOpen = !this.isOpen;
+  }
+
+  public switchLang(): void {
+    if(this.translate.currentLang === 'fr') {
+      this.translate.use('en');
+      this.currentLang = 'en';
+    } else {
+      this.translate.use('fr');
+      this.currentLang = 'fr';
+    }
   }
 
 }

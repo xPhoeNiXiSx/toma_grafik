@@ -8,6 +8,7 @@ import { ProjectService } from 'src/app/services/project/project.service';
 import { CollectionPageComponent } from './collection-page/collection-page.component';
 import { RouterModule } from '@angular/router';
 import { CollectionService } from 'src/app/services/collection.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { CollectionService } from 'src/app/services/collection.service';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    TranslateModule
   ],
   providers: [
     ProjectService,
