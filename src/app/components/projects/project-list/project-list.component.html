@@ -14,10 +14,10 @@
       Retour
     </a>
     <div class="project-carousel__nav-content">
-      <button title="Précédent" class="btn btn-arrows is-prev" (click)="prevProject()">
+      <button title="Précédent" class="btn btn-arrows is-prev" [disabled]="selectedIndex === 0" (click)="prevProject()">
         <span></span>
       </button>
-      <button title="Suivant" class="btn btn-arrows is-next" (click)="nextProject()">
+      <button title="Suivant" class="btn btn-arrows is-next" [disabled]="(selectedIndex + 1) === projects?.length" (click)="nextProject()">
         <span></span>
       </button>
     </div>
