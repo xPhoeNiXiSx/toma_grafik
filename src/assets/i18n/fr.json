@@ -1,11 +1,28 @@
 {
+	"Band": {
+		"Title": "J'achète sur le Shop"
+	},
+	"Button": {
+		"Menu": "Menu"
+	},
 	"Collections": {
 		"Title": "Collections"
 	},
 	"Landing": {
+		"Category": {
+			"Title": "Mes collections"
+		},
 		"Hero": {
 			"Span": "Toma",
 			"Title": "L'univers artistique de"
 		}
+	},
+	"Menu": {
+		"Collections": "Collections",
+		"Home": "Accueil"
+	},
+	"NotFound": {
+		"ButtonBack": "Retour à l'accueil",
+		"Title": "Page introuvable"
 	}
 }

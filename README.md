@@ -12,3 +12,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 > `ng build --configuration production`
 > `firebase deploy` or `firebase deploy --only hosting:toma_grafik`
+
+## Translate
+
+> `npm run i18n`

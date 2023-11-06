@@ -1,11 +1,28 @@
 {
+	"Band": {
+		"Title": ""
+	},
+	"Button": {
+		"Menu": "Menu"
+	},
 	"Collections": {
 		"Title": "Collections"
 	},
 	"Landing": {
+		"Category": {
+			"Title": ""
+		},
 		"Hero": {
 			"Span": "Toma",
 			"Title": "Artistic universe of"
 		}
+	},
+	"Menu": {
+		"Collections": "",
+		"Home": ""
+	},
+	"NotFound": {
+		"ButtonBack": "",
+		"Title": ""
 	}
 }

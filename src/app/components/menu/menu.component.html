@@ -3,12 +3,12 @@
     <ul class="header__nav-list">
       <li>
         <a [routerLink]="'/'" routerLinkActive="is-active" class="header__nav-link">
-          <span>Accueil</span>
+          <span>{{ 'Menu.Home' | translate }}</span>
         </a>
       </li>
       <li>
         <a [routerLink]="'/collections'" routerLinkActive="is-active" class="header__nav-link">
-          <span>Collections</span>
+          <span>{{ 'Menu.Collections' | translate }}</span>
         </a>
       </li>
       <!-- <li>
