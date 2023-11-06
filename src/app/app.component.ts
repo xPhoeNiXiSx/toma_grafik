@@ -25,6 +25,8 @@ export class AppComponent implements OnInit, AfterViewInit {
     ) {
       translate.setDefaultLang('fr');
       translate.use('fr');
+      // console.log(navigator.language);
+
       this.router.events.subscribe((event) => {
       if (event instanceof NavigationStart) {
         if(event.url.includes('collections')) {

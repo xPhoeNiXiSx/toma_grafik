@@ -1,19 +1,14 @@
 -> Interaction animation page accueil
 -> Mode Dark / White
--> Animation bouton menu
 -> Animation hover buttons
 -> Animation tout éléments cliquables
--> Préparer donnée : collection Nantes, Houses, Japan
--> Landing Page : A propos, slide scroll section
 -> Page de contact
--> Revoir logo header
 -> Carousel pag accueil ?
 -> Hover photo accueil ?
 -> Zoom sur photo ?
 -> Loupe de détail/zoom au hover ?
--> revoir modele de donnée d'un dessin
 -> Cursor : https://blog.logrocket.com/creating-custom-mouse-cursor-css/
--> faire la DB avec formulaire d'ajouter
+-> faire la DB avec formulaire d'ajout
 -> Opti chargement des images
 
 -> ajouter un effet / slider au click sur le dessin pour switch entre Noire/blanc et couleur
@@ -21,6 +16,7 @@
 -> Page collection item : Titre collection à ajouter
 -> Prévoir hover dessin
 -> Bonne pratique eco conception
+-> Recup local lang to set default
 
 Mode mobile à optimiser
 
