@@ -52,14 +52,48 @@ p {
   display: block;
   font-family: 'Ruluko', sans-serif;
   font-size: 2rem;
-  border-top: 1px solid #8B9899;
-  border-bottom: 1px solid #8B9899;
   min-height: 4.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #1B1B1B;
   padding: 0 2rem;
+  position: relative;
+  overflow: hidden;
+
+  &:before,
+  &:after {
+    transition: transform .5s ease-in-out;
+  }
+
+  &:before {
+    content: '';
+    height: 1px;
+    background: #1B1B1B;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &:after {
+    content: '';
+    height: 1px;
+    background: #1B1B1B;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  &:hover, &:focus {
+    &:before {
+      transform: translateX(100%);
+    }
+    &:after {
+      transform: translateX(-100%);
+    }
+  }
 }
 
 .col-4:nth-child(2) {
