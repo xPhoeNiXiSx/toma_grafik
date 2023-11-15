@@ -1,0 +1,13 @@
+:root {
+  --color-bg: #ffffff;
+  --color-primary: #1B1B1B;
+  --color-secondary: #BBBBBB;
+  --font-family: 'Abril Fatface, serif';
+}
+
+.studio {
+  font-family: var(--font-family);
+  position: relative;
+  z-index: 10000;
+  color: var(--color-primary);
+}

@@ -39,6 +39,8 @@ import { SocialsComponent } from './components/socials/socials.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { ArchiComponent } from './components/studio/archi/archi.component';
+import { ArchiModule } from './components/studio/archi/collections.module';
 
 // required for AOT compilation
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
@@ -77,6 +79,7 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     AppRoutingModule,
     CollectionsModule,
     RouterModule,
+    ArchiModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     HttpClientModule,

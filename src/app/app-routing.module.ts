@@ -12,6 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { CollectionPageComponent } from './components/collections/collection-page/collection-page.component';
 import { LandingComponent } from './components/landing/landing.component';
+import { ArchiComponent } from './components/studio/archi/archi.component';
 
 const routes: Routes = [
   {
@@ -27,6 +28,7 @@ const routes: Routes = [
   { path: 'work', component: WorkComponent, data: { animation: 'WorkPage' }},
   { path: 'about', component: AboutComponent, data: { animation: 'AboutPage' }},
   { path: 'process', component: ProcessComponent, data: { animation: 'ProcessPage' }},
+  { path: 'studio/archi', component: ArchiComponent},
   // { path: 'contact', component: ContactComponent, data: { animation: 'ContactPage' }},
   { path: '**', pathMatch: 'full', component: NotfoundComponent },
 ];
