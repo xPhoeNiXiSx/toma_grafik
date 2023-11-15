@@ -16,8 +16,12 @@
 
 .hero-image {
   position: absolute;
-  top: 15vh;
+  top: 150px;
   right: 15vw;
+  display: block;
+  img {
+    position: relative;
+  }
 }
 
 h1 {
