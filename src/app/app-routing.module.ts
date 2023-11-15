@@ -15,6 +15,7 @@ import { LandingComponent } from './components/landing/landing.component';
 import { ArchiComponent } from './components/studio/archi/archi.component';
 import { DefaultComponent } from './components/layout/default/default.component';
 import { StudioComponent } from './components/layout/studio/studio.component';
+import { StudiohomeComponent } from './components/studio/studiohome/studiohome.component';
 
 const routes: Routes = [
   {
@@ -41,6 +42,7 @@ const routes: Routes = [
     path: '',
     component: StudioComponent,
     children: [
+      { path: 'studio', component: StudiohomeComponent},
       { path: 'studio/archi', component: ArchiComponent}
     ]
   },

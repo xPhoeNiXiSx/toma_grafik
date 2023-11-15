@@ -21,7 +21,6 @@ import { RouterModule } from '@angular/router';
 import { NotfoundComponent } from './components/notfound/notfound.component';
 
 //Firebase & Firestore
-import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireModule } from '@angular/fire/compat';
 
@@ -38,10 +37,9 @@ import { SocialsComponent } from './components/socials/socials.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
-import { ArchiComponent } from './components/studio/archi/archi.component';
-import { ArchiModule } from './components/studio/archi/collections.module';
 import { DefaultComponent } from './components/layout/default/default.component';
 import { StudioComponent } from './components/layout/studio/studio.component';
+import { StudioModule } from './components/studio/studio.module';
 
 // required for AOT compilation
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
@@ -80,8 +78,8 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     BrowserAnimationsModule,
     AppRoutingModule,
     CollectionsModule,
+    StudioModule,
     RouterModule,
-    ArchiModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     HttpClientModule,
