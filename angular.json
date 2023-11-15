@@ -33,7 +33,10 @@
               "src/styles.scss",
               "node_modules/animate.css/animate.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/@studio-freight/lenis/bundled/lenis.min.js",
+              "src/assets/js/script.js"
+            ]
           },
           "configurations": {
             "production": {
