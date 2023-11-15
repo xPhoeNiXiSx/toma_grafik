@@ -13,23 +13,37 @@ import { NotfoundComponent } from './components/notfound/notfound.component';
 import { CollectionPageComponent } from './components/collections/collection-page/collection-page.component';
 import { LandingComponent } from './components/landing/landing.component';
 import { ArchiComponent } from './components/studio/archi/archi.component';
+import { DefaultComponent } from './components/layout/default/default.component';
+import { StudioComponent } from './components/layout/studio/studio.component';
 
 const routes: Routes = [
   {
     path: '',
-    pathMatch: 'full' ,
-    redirectTo: 'home'
+    component: DefaultComponent,
+    children: [
+      {
+        path: '',
+        pathMatch: 'full' ,
+        redirectTo: 'home'
+      },
+      { path: 'home', component: LandingComponent, data: { animation: 'HomePage' }},
+      { path: 'collections', component: CollectionPageComponent, data: { animation: 'CollectionsPage' }},
+      { path: 'collections/:slug', component: ProjectListComponent, data: { animation: 'CollectionDetailPage' }},
+      { path: 'projects', component: ProjectListComponent, data: { animation: 'ProjectPage' }},
+      { path: 'work', component: WorkComponent, data: { animation: 'WorkPage' }},
+      { path: 'about', component: AboutComponent, data: { animation: 'AboutPage' }},
+      { path: 'process', component: ProcessComponent, data: { animation: 'ProcessPage' }},
+      // { path: 'landing', component: LandingComponent},
+      // { path: 'contact', component: ContactComponent, data: { animation: 'ContactPage' }},
+    ],
   },
-  { path: 'home', component: LandingComponent, data: { animation: 'HomePage' }},
-  // { path: 'landing', component: LandingComponent},
-  { path: 'collections', component: CollectionPageComponent, data: { animation: 'CollectionsPage' }},
-  { path: 'collections/:slug', component: ProjectListComponent, data: { animation: 'CollectionDetailPage' }},
-  { path: 'projects', component: ProjectListComponent, data: { animation: 'ProjectPage' }},
-  { path: 'work', component: WorkComponent, data: { animation: 'WorkPage' }},
-  { path: 'about', component: AboutComponent, data: { animation: 'AboutPage' }},
-  { path: 'process', component: ProcessComponent, data: { animation: 'ProcessPage' }},
-  { path: 'studio/archi', component: ArchiComponent},
-  // { path: 'contact', component: ContactComponent, data: { animation: 'ContactPage' }},
+  {
+    path: '',
+    component: StudioComponent,
+    children: [
+      { path: 'studio/archi', component: ArchiComponent}
+    ]
+  },
   { path: '**', pathMatch: 'full', component: NotfoundComponent },
 ];
 

@@ -19,7 +19,6 @@ import { ContactComponent } from './components/contact/contact.component';
 import { CollectionsModule } from './components/collections/collections.module';
 import { RouterModule } from '@angular/router';
 import { NotfoundComponent } from './components/notfound/notfound.component';
-import { MenuComponent } from './components/menu/menu.component';
 
 //Firebase & Firestore
 import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
@@ -41,6 +40,8 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { ArchiComponent } from './components/studio/archi/archi.component';
 import { ArchiModule } from './components/studio/archi/collections.module';
+import { DefaultComponent } from './components/layout/default/default.component';
+import { StudioComponent } from './components/layout/studio/studio.component';
 
 // required for AOT compilation
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
@@ -61,7 +62,6 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     ProcessComponent,
     ContactComponent,
     NotfoundComponent,
-    MenuComponent,
     LandingComponent,
     HeroComponent,
     GridComponent,
@@ -70,6 +70,8 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     FooterComponent,
     BandComponent,
     SocialsComponent,
+    DefaultComponent,
+    StudioComponent,
   ],
   imports: [
     FormsModule,

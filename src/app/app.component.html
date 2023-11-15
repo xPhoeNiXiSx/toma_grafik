@@ -1,14 +1,3 @@
-<main [@routeAnimations]="prepareRoute(outlet)">
-  <div class="collection-bg">
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-  <app-header></app-header>
-  <router-outlet #outlet="outlet">
-  </router-outlet>
-  <div #cursor class="cursor"></div>
-  <div #cursorDot class="cursor-dot"></div>
-</main>
+
+<router-outlet #outlet="outlet">
+</router-outlet>

@@ -21,9 +21,6 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.router.events.pipe(
-      filter(event => event instanceof NavigationEnd),
-    ).subscribe(() => this.isOpen = false);
   }
 
   public toggleMenu(): void {
@@ -38,6 +35,12 @@ export class HeaderComponent implements OnInit {
       this.translate.use('fr');
       this.currentLang = 'fr';
     }
+  }
+
+  public changeRoute(link: string): void {
+    this.isOpen = !this.isOpen;
+    this.router.navigate([link]);
+
   }
 
 }
