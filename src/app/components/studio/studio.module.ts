@@ -8,15 +8,21 @@ import { ArchiComponent } from './archi/archi.component';
 import { ConceptComponent } from './archi/concept/concept.component';
 import { ArchiHeroComponent } from './archi/hero/archi-hero.component';
 import { ParallaxDirective } from 'src/app/directives/parallax.directive';
+import { ArchilistComponent } from './archi/list/archilist.component';
+import { ArchicarouselComponent } from './archi/carousel/archicarousel.component';
+import { ArchivaluesComponent } from './archi/values/archivalues.component';
 
 
 @NgModule({
   declarations: [
     StudiohomeComponent,
+    ArchilistComponent,
     ArchiComponent,
     ConceptComponent,
     ArchiHeroComponent,
-    ParallaxDirective
+    ParallaxDirective,
+    ArchicarouselComponent,
+    ArchivaluesComponent,
   ],
   imports: [
     CommonModule,

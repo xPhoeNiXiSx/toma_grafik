@@ -1,0 +1,31 @@
+section {
+  background: #FFFFFF;
+  min-height: 100vh;
+  padding: 10rem 0;
+  width: 100vw;
+  overflow-x: auto;
+}
+
+.carousel-wrapper {
+  display: flex;
+  align-items: flex-start;
+}
+
+.carousel-item {
+  width: 30vw;
+  > img {
+    width: 100%;
+  }
+  &:nth-child(odd) {
+    margin-top: 10rem;
+  }
+}
+
+span {
+  color: #1B1B1B;
+  font-family: 'Ruluko', sans-serif;
+  font-size: 2rem;
+  text-align: right;
+  display: block;
+  padding: 3rem 4rem;
+}
