@@ -33,6 +33,11 @@
           <span>{{ 'Menu.Collections' | translate }}</span>
         </a>
       </li>
+      <li>
+        <a (click)="changeRoute('/studio')" routerLinkActive="is-active" class="header__nav-link">
+          <span>{{ 'Menu.Studio' | translate }}</span>
+        </a>
+      </li>
       <!-- <li>
         <a [routerLink]="'/about'" routerLinkActive="is-active" class="header__nav-link">
           <span>About</span>

@@ -39,11 +39,11 @@ const routes: Routes = [
     ],
   },
   {
-    path: '',
+    path: 'studio',
     component: StudioComponent,
     children: [
-      { path: 'studio', component: StudiohomeComponent},
-      { path: 'studio/archi', component: ArchiComponent}
+      { path: '', component: StudiohomeComponent},
+      { path: 'archi', component: ArchiComponent}
     ]
   },
   { path: '**', pathMatch: 'full', component: NotfoundComponent },

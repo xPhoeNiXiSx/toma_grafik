@@ -19,7 +19,8 @@
 	},
 	"Menu": {
 		"Collections": "Collections",
-		"Home": "Accueil"
+		"Home": "Accueil",
+		"Studio": "Studio"
 	},
 	"NotFound": {
 		"ButtonBack": "Retour à l'accueil",
