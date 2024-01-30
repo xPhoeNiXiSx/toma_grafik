@@ -11,6 +11,7 @@ import { ParallaxDirective } from 'src/app/directives/parallax.directive';
 import { ArchilistComponent } from './archi/list/archilist.component';
 import { ArchicarouselComponent } from './archi/carousel/archicarousel.component';
 import { ArchivaluesComponent } from './archi/values/archivalues.component';
+import { TypefacesComponent } from './typefaces/typefaces.component';
 
 
 @NgModule({
@@ -23,11 +24,12 @@ import { ArchivaluesComponent } from './archi/values/archivalues.component';
     ParallaxDirective,
     ArchicarouselComponent,
     ArchivaluesComponent,
+    TypefacesComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
-    TranslateModule
+    TranslateModule,
   ],
   providers: [],
   bootstrap: []

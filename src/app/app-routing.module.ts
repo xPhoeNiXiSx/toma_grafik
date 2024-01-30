@@ -16,6 +16,7 @@ import { ArchiComponent } from './components/studio/archi/archi.component';
 import { DefaultComponent } from './components/layout/default/default.component';
 import { StudioComponent } from './components/layout/studio/studio.component';
 import { StudiohomeComponent } from './components/studio/studiohome/studiohome.component';
+import { TypefacesComponent } from './components/studio/typefaces/typefaces.component';
 
 const routes: Routes = [
   {
@@ -43,7 +44,8 @@ const routes: Routes = [
     component: StudioComponent,
     children: [
       { path: '', component: StudiohomeComponent},
-      { path: 'archi', component: ArchiComponent}
+      { path: 'archi', component: ArchiComponent},
+      { path: 'typefaces', component: TypefacesComponent}
     ]
   },
   { path: '**', pathMatch: 'full', component: NotfoundComponent },

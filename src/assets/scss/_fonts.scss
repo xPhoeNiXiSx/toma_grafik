@@ -13,3 +13,11 @@
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: 'Allright';
+  src: url('../fonts/Allright-Regular.woff2') format('woff2'),
+      url('../fonts/Allright-Regular.woff') format('woff');
+  font-style: normal;
+  font-display: swap;
+}
