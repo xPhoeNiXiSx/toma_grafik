@@ -1,19 +1,84 @@
 .typefaces {
-  --color-bg: #ffffff;
   --color-primary: #1B1B1B;
   --color-secondary: #BBBBBB;
+  --color-tertiary: #1F1F1F;
+  --color-orange: #994825;
   --font-family-title: 'Allright';
-  --font-family: 'WorkSans, serif';
+  --font-family: 'Work Sans', serif;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: var(--color-bg);
+  font-family: var(--font-family);
 }
 
 h1 {
   font-family: var(--font-family-title);
+  span {
+    font-size: 20rem;
+    line-height: 20rem;
+    color: var(--color-white);
+    position: relative;
+    &:last-child {
+      margin-left: 11rem;
+      margin-top: -3rem;
+      &::before {
+        content: '';
+        width: 7rem;
+        height: 1px;
+        background: var(--color-white);
+        position: absolute;
+        right: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-right: 3rem;
+        border-radius: 1px;
+      }
+      &::after {
+        content: '';
+        width: 4rem;
+        height: 4rem;
+        border-radius: 2rem;
+        border: 1px solid var(--color-white);
+        position: absolute;
+        right: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-right: 8rem;
+      }
+    }
+  }
+}
+
+.btn {
+  font-family: var(--font-family);
+  background: var(--color-tertiary);
+  color: var(--color-orange);
+  font-size: 2.4rem;
+  border-radius: 1.5rem;
+  padding: 0 5rem;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  gap: 10rem;
+  p {
+    font-size: 1.6rem;
+    line-height: 3.2rem;
+    margin-bottom: 4rem;
+  }
 }
 
 .list {
   display: flex;
   flex-direction: column;
   gap: 3rem;
+  padding: 4rem 0;
   &__item {
     &-content {
       background: rgba(255,255,255,0.05);
@@ -30,5 +95,23 @@ h1 {
         }
       }
     }
+    &-title {
+      font-family: var(--font-family-item);
+    }
   }
+}
+
+.back-home {
+  display: block;
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  color: var(--color-bg);
+  border: 1px solid var(--color-bg);
+  background: var(--color-white);
+  height: 4rem;
+  border-radius: 2rem;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
 }

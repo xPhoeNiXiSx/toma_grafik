@@ -4,9 +4,15 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 ## Lancer en local 
 > `ng serve --open`
+> `ng serve --port 4201`
+
 ## Install Firebase CLI
 > `sudo npm install -g firebase-tools`
 > `firebase login`
+
+## Firebase
+# Enable webframeworks
+> `firebase experiments:enable webframeworks`
 
 ## Prod and Deploy
 
